@@ -1,0 +1,3057 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>reactlog</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="reactlogAsset/fira-mono_source-sans-pro_latin-ext.css">
+  <link rel="stylesheet" type="text/css" href="reactlogAsset/reactlog.css">
+
+  <script>
+    try {
+      window.__APP_DATA__ = [
+  {
+    "action": "define",
+    "reactId": "r3",
+    "label": "Theme Counter",
+    "type": "reactiveVal",
+    "value": " num 0",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.150155
+  },
+  {
+    "action": "define",
+    "reactId": "r4",
+    "label": "reactive({\n    poke_data[[input$selected]]\n})",
+    "type": "observable",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.191854
+  },
+  {
+    "action": "define",
+    "reactId": "r5",
+    "label": "reactive({\n    input$is_shiny\n})",
+    "type": "observable",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.193693
+  },
+  {
+    "action": "define",
+    "reactId": "r6",
+    "label": "output$poke_info_1-poke_infos",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.250581
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx1",
+    "label": "output$poke_info_1-poke_infos",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [23, 35, 62, 7, 35, 7],
+    "srcfile": "mod_poke_info.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.250809
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r6",
+    "ctxId": "ctx1",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.250901
+  },
+  {
+    "action": "asyncStart",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.251059
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r6",
+    "ctxId": "ctx1",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.251369
+  },
+  {
+    "action": "define",
+    "reactId": "r7",
+    "label": "output$poke_type_1-poke_types",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.348384
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx2",
+    "label": "output$poke_type_1-poke_types",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [22, 35, 88, 8, 35, 8],
+    "srcfile": "mod_poke_type.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.348537
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r7",
+    "ctxId": "ctx2",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.34862
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r7",
+    "ctxId": "ctx2",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.348732
+  },
+  {
+    "action": "define",
+    "reactId": "r8",
+    "label": "output$poke_evolve_1-poke_evolve",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.359885
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx3",
+    "label": "output$poke_evolve_1-poke_evolve",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [23, 36, 59, 7, 36, 7],
+    "srcfile": "mod_poke_evolve.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.360234
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r8",
+    "ctxId": "ctx3",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.360346
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r8",
+    "ctxId": "ctx3",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.36048
+  },
+  {
+    "action": "define",
+    "reactId": "r9",
+    "label": "output$poke_stats_1-height",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.365985
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx4",
+    "label": "output$poke_stats_1-height",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.366148
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r9",
+    "ctxId": "ctx4",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.366233
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r9",
+    "ctxId": "ctx4",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.366346
+  },
+  {
+    "action": "define",
+    "reactId": "r10",
+    "label": "output$poke_stats_1-weight",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.368913
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx5",
+    "label": "output$poke_stats_1-weight",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.369066
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r10",
+    "ctxId": "ctx5",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.369148
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r10",
+    "ctxId": "ctx5",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.369257
+  },
+  {
+    "action": "define",
+    "reactId": "r11",
+    "label": "output$poke_stats_1-base_happiness",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.37167
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx6",
+    "label": "output$poke_stats_1-base_happiness",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.371892
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r11",
+    "ctxId": "ctx6",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.371975
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r11",
+    "ctxId": "ctx6",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.372106
+  },
+  {
+    "action": "define",
+    "reactId": "r12",
+    "label": "output$poke_stats_1-capture_rate",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.377669
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx7",
+    "label": "output$poke_stats_1-capture_rate",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.37784
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r12",
+    "ctxId": "ctx7",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.377961
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r12",
+    "ctxId": "ctx7",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.378171
+  },
+  {
+    "action": "define",
+    "reactId": "r13",
+    "label": "output$poke_stats_1-growth_rate",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.382732
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx8",
+    "label": "output$poke_stats_1-growth_rate",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.382899
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r13",
+    "ctxId": "ctx8",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.383016
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r13",
+    "ctxId": "ctx8",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.383214
+  },
+  {
+    "action": "define",
+    "reactId": "r14",
+    "label": "output$poke_stats_1-poke_stats",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.388718
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx9",
+    "label": "output$poke_stats_1-poke_stats",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [42, 42, 44, 36, 42, 36],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.388881
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r14",
+    "ctxId": "ctx9",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.388964
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r14",
+    "ctxId": "ctx9",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.389035
+  },
+  {
+    "action": "define",
+    "reactId": "r15",
+    "label": "output$poke_stats_1-poke_stats_card",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.392292
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx10",
+    "label": "output$poke_stats_1-poke_stats_card",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [48, 40, 74, 7, 40, 7],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.39246
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r15",
+    "ctxId": "ctx10",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.392546
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r15",
+    "ctxId": "ctx10",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.392661
+  },
+  {
+    "action": "define",
+    "reactId": "r16",
+    "label": "output$poke_move_1-poke_moves",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.39767
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx11",
+    "label": "output$poke_move_1-poke_moves",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [22, 38, 56, 7, 38, 7],
+    "srcfile": "mod_poke_move.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.397822
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r16",
+    "ctxId": "ctx11",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.397909
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r16",
+    "ctxId": "ctx11",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.398025
+  },
+  {
+    "action": "define",
+    "reactId": "r17",
+    "label": "output$poke_location_1-poke_locations",
+    "type": "observer",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.401056
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx12",
+    "label": "output$poke_location_1-poke_locations",
+    "type": "observer",
+    "prevCtxId": null,
+    "srcref": [24, 39, 45, 7, 39, 7],
+    "srcfile": "mod_poke_location.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.401194
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r17",
+    "ctxId": "ctx12",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.401279
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r17",
+    "ctxId": "ctx12",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.401386
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx13",
+    "label": "output$poke_info_1-poke_infos",
+    "type": "observer",
+    "prevCtxId": "ctx1",
+    "srcref": [23, 35, 62, 7, 35, 7],
+    "srcfile": "mod_poke_info.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.414245
+  },
+  {
+    "action": "enter",
+    "reactId": "r6",
+    "ctxId": "ctx13",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.414575
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx13",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.416056
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx14",
+    "label": "reactive({\n    poke_data[[input$selected]]\n})",
+    "type": "observable",
+    "prevCtxId": null,
+    "srcref": null,
+    "srcfile": "",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.416332
+  },
+  {
+    "action": "enter",
+    "reactId": "r4",
+    "ctxId": "ctx14",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.416456
+  },
+  {
+    "action": "define",
+    "reactId": "r1$poke_select_1-selected",
+    "label": "input$poke_select_1-selected",
+    "type": "reactiveValuesKey",
+    "value": " chr \"bulbasaur\"",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.417048
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r4",
+    "depOnReactId": "r1$poke_select_1-selected",
+    "ctxId": "ctx14",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.417277
+  },
+  {
+    "action": "exit",
+    "reactId": "r4",
+    "ctxId": "ctx14",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.417399
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx13",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.417734
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx15",
+    "label": "reactive({\n    input$is_shiny\n})",
+    "type": "observable",
+    "prevCtxId": null,
+    "srcref": null,
+    "srcfile": "",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.417896
+  },
+  {
+    "action": "enter",
+    "reactId": "r5",
+    "ctxId": "ctx15",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.418005
+  },
+  {
+    "action": "define",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "label": "input$poke_select_1-is_shiny",
+    "type": "reactiveValuesKey",
+    "value": " logi FALSE",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.418534
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r5",
+    "depOnReactId": "r1$poke_select_1-is_shiny",
+    "ctxId": "ctx15",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.418764
+  },
+  {
+    "action": "exit",
+    "reactId": "r5",
+    "ctxId": "ctx15",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.41887
+  },
+  {
+    "action": "exit",
+    "reactId": "r6",
+    "ctxId": "ctx13",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.451614
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx16",
+    "label": "output$poke_type_1-poke_types",
+    "type": "observer",
+    "prevCtxId": "ctx2",
+    "srcref": [22, 35, 88, 8, 35, 8],
+    "srcfile": "mod_poke_type.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.451957
+  },
+  {
+    "action": "enter",
+    "reactId": "r7",
+    "ctxId": "ctx16",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.452115
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r7",
+    "depOnReactId": "r4",
+    "ctxId": "ctx16",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.452681
+  },
+  {
+    "action": "exit",
+    "reactId": "r7",
+    "ctxId": "ctx16",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.501306
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx17",
+    "label": "output$poke_evolve_1-poke_evolve",
+    "type": "observer",
+    "prevCtxId": "ctx3",
+    "srcref": [23, 36, 59, 7, 36, 7],
+    "srcfile": "mod_poke_evolve.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.501644
+  },
+  {
+    "action": "enter",
+    "reactId": "r8",
+    "ctxId": "ctx17",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.501762
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r8",
+    "depOnReactId": "r4",
+    "ctxId": "ctx17",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.502322
+  },
+  {
+    "action": "exit",
+    "reactId": "r8",
+    "ctxId": "ctx17",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.504164
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx18",
+    "label": "output$poke_stats_1-height",
+    "type": "observer",
+    "prevCtxId": "ctx4",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.50452
+  },
+  {
+    "action": "enter",
+    "reactId": "r9",
+    "ctxId": "ctx18",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.504643
+  },
+  {
+    "action": "define",
+    "reactId": "r1$poke_stats_1-poke_basic_stats",
+    "label": "input$poke_stats_1-poke_basic_stats",
+    "type": "reactiveValuesKey",
+    "value": " NULL",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.505519
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r9",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx18",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.518018
+  },
+  {
+    "action": "exit",
+    "reactId": "r9",
+    "ctxId": "ctx18",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.519527
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx19",
+    "label": "output$poke_stats_1-weight",
+    "type": "observer",
+    "prevCtxId": "ctx5",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.519841
+  },
+  {
+    "action": "enter",
+    "reactId": "r10",
+    "ctxId": "ctx19",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.519988
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r10",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx19",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.520649
+  },
+  {
+    "action": "exit",
+    "reactId": "r10",
+    "ctxId": "ctx19",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.521602
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx20",
+    "label": "output$poke_stats_1-base_happiness",
+    "type": "observer",
+    "prevCtxId": "ctx6",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.521881
+  },
+  {
+    "action": "enter",
+    "reactId": "r11",
+    "ctxId": "ctx20",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.521991
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r11",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx20",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.522548
+  },
+  {
+    "action": "exit",
+    "reactId": "r11",
+    "ctxId": "ctx20",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.523466
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx21",
+    "label": "output$poke_stats_1-capture_rate",
+    "type": "observer",
+    "prevCtxId": "ctx7",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.523738
+  },
+  {
+    "action": "enter",
+    "reactId": "r12",
+    "ctxId": "ctx21",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.523846
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r12",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx21",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.524431
+  },
+  {
+    "action": "exit",
+    "reactId": "r12",
+    "ctxId": "ctx21",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.525369
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx22",
+    "label": "output$poke_stats_1-growth_rate",
+    "type": "observer",
+    "prevCtxId": "ctx8",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.525648
+  },
+  {
+    "action": "enter",
+    "reactId": "r13",
+    "ctxId": "ctx22",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.52576
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r13",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx22",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.526308
+  },
+  {
+    "action": "exit",
+    "reactId": "r13",
+    "ctxId": "ctx22",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.527572
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx23",
+    "label": "output$poke_stats_1-poke_stats_card",
+    "type": "observer",
+    "prevCtxId": "ctx10",
+    "srcref": [48, 40, 74, 7, 40, 7],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.528166
+  },
+  {
+    "action": "enter",
+    "reactId": "r15",
+    "ctxId": "ctx23",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.528303
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r15",
+    "depOnReactId": "r4",
+    "ctxId": "ctx23",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.528923
+  },
+  {
+    "action": "exit",
+    "reactId": "r15",
+    "ctxId": "ctx23",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.540554
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx24",
+    "label": "output$poke_move_1-poke_moves",
+    "type": "observer",
+    "prevCtxId": "ctx11",
+    "srcref": [22, 38, 56, 7, 38, 7],
+    "srcfile": "mod_poke_move.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.541063
+  },
+  {
+    "action": "enter",
+    "reactId": "r16",
+    "ctxId": "ctx24",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.541285
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r16",
+    "depOnReactId": "r4",
+    "ctxId": "ctx24",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.542794
+  },
+  {
+    "action": "exit",
+    "reactId": "r16",
+    "ctxId": "ctx24",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.546857
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx25",
+    "label": "output$poke_location_1-poke_locations",
+    "type": "observer",
+    "prevCtxId": "ctx12",
+    "srcref": [24, 39, 45, 7, 39, 7],
+    "srcfile": "mod_poke_location.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.547357
+  },
+  {
+    "action": "enter",
+    "reactId": "r17",
+    "ctxId": "ctx25",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.547687
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r17",
+    "depOnReactId": "r4",
+    "ctxId": "ctx25",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.548797
+  },
+  {
+    "action": "exit",
+    "reactId": "r17",
+    "ctxId": "ctx25",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.554634
+  },
+  {
+    "action": "asyncStop",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.554881
+  },
+  {
+    "action": "idle",
+    "session": null,
+    "time": 1692308255.556176
+  },
+  {
+    "action": "valueChange",
+    "reactId": "r1$poke_stats_1-poke_basic_stats",
+    "value": " logi TRUE",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.671682
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.671756
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r9",
+    "ctxId": "ctx18",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.671948
+  },
+  {
+    "action": "asyncStart",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.67252
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r9",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx18",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.67281
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r9",
+    "ctxId": "ctx18",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.672938
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r10",
+    "ctxId": "ctx19",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.673013
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r10",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx19",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.673561
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r10",
+    "ctxId": "ctx19",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.673659
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r11",
+    "ctxId": "ctx20",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.673774
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r11",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx20",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.674231
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r11",
+    "ctxId": "ctx20",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.674324
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r12",
+    "ctxId": "ctx21",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.674396
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r12",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx21",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.674895
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r12",
+    "ctxId": "ctx21",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.67499
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r13",
+    "ctxId": "ctx22",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.675068
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r13",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx22",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.675551
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r13",
+    "ctxId": "ctx22",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.675677
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.675802
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx26",
+    "label": "output$poke_stats_1-height",
+    "type": "observer",
+    "prevCtxId": "ctx18",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.681348
+  },
+  {
+    "action": "enter",
+    "reactId": "r9",
+    "ctxId": "ctx26",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.681559
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r9",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx26",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.707211
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r9",
+    "depOnReactId": "r4",
+    "ctxId": "ctx26",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.707351
+  },
+  {
+    "action": "exit",
+    "reactId": "r9",
+    "ctxId": "ctx26",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.709179
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx27",
+    "label": "output$poke_stats_1-weight",
+    "type": "observer",
+    "prevCtxId": "ctx19",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.70953
+  },
+  {
+    "action": "enter",
+    "reactId": "r10",
+    "ctxId": "ctx27",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.709648
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r10",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx27",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.710459
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r10",
+    "depOnReactId": "r4",
+    "ctxId": "ctx27",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.710741
+  },
+  {
+    "action": "exit",
+    "reactId": "r10",
+    "ctxId": "ctx27",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.713643
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx28",
+    "label": "output$poke_stats_1-base_happiness",
+    "type": "observer",
+    "prevCtxId": "ctx20",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.713979
+  },
+  {
+    "action": "enter",
+    "reactId": "r11",
+    "ctxId": "ctx28",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.714096
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r11",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx28",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.714705
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r11",
+    "depOnReactId": "r4",
+    "ctxId": "ctx28",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.714829
+  },
+  {
+    "action": "exit",
+    "reactId": "r11",
+    "ctxId": "ctx28",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.716592
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx29",
+    "label": "output$poke_stats_1-capture_rate",
+    "type": "observer",
+    "prevCtxId": "ctx21",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.716888
+  },
+  {
+    "action": "enter",
+    "reactId": "r12",
+    "ctxId": "ctx29",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.716997
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r12",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx29",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.717568
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r12",
+    "depOnReactId": "r4",
+    "ctxId": "ctx29",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.717686
+  },
+  {
+    "action": "exit",
+    "reactId": "r12",
+    "ctxId": "ctx29",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.719327
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx30",
+    "label": "output$poke_stats_1-growth_rate",
+    "type": "observer",
+    "prevCtxId": "ctx22",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.71964
+  },
+  {
+    "action": "enter",
+    "reactId": "r13",
+    "ctxId": "ctx30",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.719752
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r13",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx30",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.720324
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r13",
+    "depOnReactId": "r4",
+    "ctxId": "ctx30",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.720445
+  },
+  {
+    "action": "exit",
+    "reactId": "r13",
+    "ctxId": "ctx30",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.722088
+  },
+  {
+    "action": "asyncStop",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.722169
+  },
+  {
+    "action": "idle",
+    "session": null,
+    "time": 1692308255.722508
+  },
+  {
+    "action": "asyncStart",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.740466
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx31",
+    "label": "output$poke_stats_1-poke_stats",
+    "type": "observer",
+    "prevCtxId": "ctx9",
+    "srcref": [42, 42, 44, 36, 42, 36],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.741273
+  },
+  {
+    "action": "enter",
+    "reactId": "r14",
+    "ctxId": "ctx31",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.74145
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r14",
+    "depOnReactId": "r4",
+    "ctxId": "ctx31",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.742103
+  },
+  {
+    "action": "exit",
+    "reactId": "r14",
+    "ctxId": "ctx31",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.771971
+  },
+  {
+    "action": "asyncStop",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308255.772097
+  },
+  {
+    "action": "idle",
+    "session": null,
+    "time": 1692308255.772484
+  },
+  {
+    "action": "valueChange",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "value": " logi TRUE",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.820736
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.820877
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r5",
+    "ctxId": "ctx15",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.821049
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r6",
+    "ctxId": "ctx13",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.821195
+  },
+  {
+    "action": "asyncStart",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822161
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx13",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822598
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx13",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822716
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r6",
+    "ctxId": "ctx13",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822795
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r5",
+    "depOnReactId": "r1$poke_select_1-is_shiny",
+    "ctxId": "ctx15",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822851
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r5",
+    "ctxId": "ctx15",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822935
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.822985
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx32",
+    "label": "output$poke_info_1-poke_infos",
+    "type": "observer",
+    "prevCtxId": "ctx13",
+    "srcref": [23, 35, 62, 7, 35, 7],
+    "srcfile": "mod_poke_info.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.823543
+  },
+  {
+    "action": "enter",
+    "reactId": "r6",
+    "ctxId": "ctx32",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.823659
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx32",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.835235
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx32",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.835641
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx33",
+    "label": "reactive({\n    input$is_shiny\n})",
+    "type": "observable",
+    "prevCtxId": "ctx15",
+    "srcref": null,
+    "srcfile": "",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.846552
+  },
+  {
+    "action": "enter",
+    "reactId": "r5",
+    "ctxId": "ctx33",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.846803
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r5",
+    "depOnReactId": "r1$poke_select_1-is_shiny",
+    "ctxId": "ctx33",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.847273
+  },
+  {
+    "action": "exit",
+    "reactId": "r5",
+    "ctxId": "ctx33",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.84745
+  },
+  {
+    "action": "exit",
+    "reactId": "r6",
+    "ctxId": "ctx32",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.872365
+  },
+  {
+    "action": "asyncStop",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308261.872546
+  },
+  {
+    "action": "idle",
+    "session": null,
+    "time": 1692308261.872925
+  },
+  {
+    "action": "valueChange",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "value": " logi FALSE",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.587764
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.587904
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r5",
+    "ctxId": "ctx33",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.588125
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r6",
+    "ctxId": "ctx32",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.588294
+  },
+  {
+    "action": "asyncStart",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.58927
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx32",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.589769
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx32",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.590089
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r6",
+    "ctxId": "ctx32",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.590273
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r5",
+    "depOnReactId": "r1$poke_select_1-is_shiny",
+    "ctxId": "ctx33",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.590462
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r5",
+    "ctxId": "ctx33",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.590567
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r1$poke_select_1-is_shiny",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.590631
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx34",
+    "label": "output$poke_info_1-poke_infos",
+    "type": "observer",
+    "prevCtxId": "ctx32",
+    "srcref": [23, 35, 62, 7, 35, 7],
+    "srcfile": "mod_poke_info.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.591291
+  },
+  {
+    "action": "enter",
+    "reactId": "r6",
+    "ctxId": "ctx34",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.591407
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx34",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.59199
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx34",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.592321
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx35",
+    "label": "reactive({\n    input$is_shiny\n})",
+    "type": "observable",
+    "prevCtxId": "ctx33",
+    "srcref": null,
+    "srcfile": "",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.592499
+  },
+  {
+    "action": "enter",
+    "reactId": "r5",
+    "ctxId": "ctx35",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.59262
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r5",
+    "depOnReactId": "r1$poke_select_1-is_shiny",
+    "ctxId": "ctx35",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.592731
+  },
+  {
+    "action": "exit",
+    "reactId": "r5",
+    "ctxId": "ctx35",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.592846
+  },
+  {
+    "action": "exit",
+    "reactId": "r6",
+    "ctxId": "ctx34",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.620084
+  },
+  {
+    "action": "asyncStop",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308264.620161
+  },
+  {
+    "action": "idle",
+    "session": null,
+    "time": 1692308264.62054
+  },
+  {
+    "action": "valueChange",
+    "reactId": "r1$poke_select_1-selected",
+    "value": " chr \"ivysaur\"",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.355871
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r1$poke_select_1-selected",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.355944
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r4",
+    "ctxId": "ctx14",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.356082
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r7",
+    "ctxId": "ctx16",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.356213
+  },
+  {
+    "action": "asyncStart",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.356788
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r7",
+    "depOnReactId": "r4",
+    "ctxId": "ctx16",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.357227
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r7",
+    "ctxId": "ctx16",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.357347
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r8",
+    "ctxId": "ctx17",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.357444
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r8",
+    "depOnReactId": "r4",
+    "ctxId": "ctx17",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.357941
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r8",
+    "ctxId": "ctx17",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.358038
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r15",
+    "ctxId": "ctx23",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.358118
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r15",
+    "depOnReactId": "r4",
+    "ctxId": "ctx23",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.358782
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r15",
+    "ctxId": "ctx23",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.358882
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r16",
+    "ctxId": "ctx24",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.358972
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r16",
+    "depOnReactId": "r4",
+    "ctxId": "ctx24",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.359603
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r16",
+    "ctxId": "ctx24",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.359696
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r17",
+    "ctxId": "ctx25",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.359782
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r17",
+    "depOnReactId": "r4",
+    "ctxId": "ctx25",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.360416
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r17",
+    "ctxId": "ctx25",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.360586
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r9",
+    "ctxId": "ctx26",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.360665
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r9",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx26",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.361187
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r9",
+    "depOnReactId": "r4",
+    "ctxId": "ctx26",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.361329
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r9",
+    "ctxId": "ctx26",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.36141
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r10",
+    "ctxId": "ctx27",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.361487
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r10",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx27",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.361983
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r10",
+    "depOnReactId": "r4",
+    "ctxId": "ctx27",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.362093
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r10",
+    "ctxId": "ctx27",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.36217
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r11",
+    "ctxId": "ctx28",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.362247
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r11",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx28",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.362671
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r11",
+    "depOnReactId": "r4",
+    "ctxId": "ctx28",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.362811
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r11",
+    "ctxId": "ctx28",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.362911
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r12",
+    "ctxId": "ctx29",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.362985
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r12",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx29",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.363781
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r12",
+    "depOnReactId": "r4",
+    "ctxId": "ctx29",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.363872
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r12",
+    "ctxId": "ctx29",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.363953
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r13",
+    "ctxId": "ctx30",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.364049
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r13",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx30",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.365035
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r13",
+    "depOnReactId": "r4",
+    "ctxId": "ctx30",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.365159
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r13",
+    "ctxId": "ctx30",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.365248
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r14",
+    "ctxId": "ctx31",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.365423
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r14",
+    "depOnReactId": "r4",
+    "ctxId": "ctx31",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.366215
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r14",
+    "ctxId": "ctx31",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.366404
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r6",
+    "ctxId": "ctx34",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.366634
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx34",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.367608
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx34",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.367942
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r6",
+    "ctxId": "ctx34",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.368081
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r4",
+    "depOnReactId": "r1$poke_select_1-selected",
+    "ctxId": "ctx14",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.36817
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r4",
+    "ctxId": "ctx14",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.368247
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r1$poke_select_1-selected",
+    "ctxId": null,
+    "type": "other",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.368311
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx36",
+    "label": "output$poke_type_1-poke_types",
+    "type": "observer",
+    "prevCtxId": "ctx16",
+    "srcref": [22, 35, 88, 8, 35, 8],
+    "srcfile": "mod_poke_type.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.369111
+  },
+  {
+    "action": "enter",
+    "reactId": "r7",
+    "ctxId": "ctx36",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.369278
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r7",
+    "depOnReactId": "r4",
+    "ctxId": "ctx36",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.407017
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx37",
+    "label": "reactive({\n    poke_data[[input$selected]]\n})",
+    "type": "observable",
+    "prevCtxId": "ctx14",
+    "srcref": null,
+    "srcfile": "",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.407264
+  },
+  {
+    "action": "enter",
+    "reactId": "r4",
+    "ctxId": "ctx37",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.407393
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r4",
+    "depOnReactId": "r1$poke_select_1-selected",
+    "ctxId": "ctx37",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.407507
+  },
+  {
+    "action": "exit",
+    "reactId": "r4",
+    "ctxId": "ctx37",
+    "type": "observable",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.407634
+  },
+  {
+    "action": "exit",
+    "reactId": "r7",
+    "ctxId": "ctx36",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.423549
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx38",
+    "label": "output$poke_evolve_1-poke_evolve",
+    "type": "observer",
+    "prevCtxId": "ctx17",
+    "srcref": [23, 36, 59, 7, 36, 7],
+    "srcfile": "mod_poke_evolve.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.423948
+  },
+  {
+    "action": "enter",
+    "reactId": "r8",
+    "ctxId": "ctx38",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.424066
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r8",
+    "depOnReactId": "r4",
+    "ctxId": "ctx38",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.424628
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r8",
+    "depOnReactId": "r5",
+    "ctxId": "ctx38",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.424894
+  },
+  {
+    "action": "exit",
+    "reactId": "r8",
+    "ctxId": "ctx38",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.426652
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx39",
+    "label": "output$poke_stats_1-poke_stats_card",
+    "type": "observer",
+    "prevCtxId": "ctx23",
+    "srcref": [48, 40, 74, 7, 40, 7],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.427014
+  },
+  {
+    "action": "enter",
+    "reactId": "r15",
+    "ctxId": "ctx39",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.42713
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r15",
+    "depOnReactId": "r4",
+    "ctxId": "ctx39",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.427671
+  },
+  {
+    "action": "exit",
+    "reactId": "r15",
+    "ctxId": "ctx39",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.440914
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx40",
+    "label": "output$poke_move_1-poke_moves",
+    "type": "observer",
+    "prevCtxId": "ctx24",
+    "srcref": [22, 38, 56, 7, 38, 7],
+    "srcfile": "mod_poke_move.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.441372
+  },
+  {
+    "action": "enter",
+    "reactId": "r16",
+    "ctxId": "ctx40",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.441492
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r16",
+    "depOnReactId": "r4",
+    "ctxId": "ctx40",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.463435
+  },
+  {
+    "action": "exit",
+    "reactId": "r16",
+    "ctxId": "ctx40",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.473452
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx41",
+    "label": "output$poke_location_1-poke_locations",
+    "type": "observer",
+    "prevCtxId": "ctx25",
+    "srcref": [24, 39, 45, 7, 39, 7],
+    "srcfile": "mod_poke_location.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.473803
+  },
+  {
+    "action": "enter",
+    "reactId": "r17",
+    "ctxId": "ctx41",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.473945
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r17",
+    "depOnReactId": "r4",
+    "ctxId": "ctx41",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.474512
+  },
+  {
+    "action": "exit",
+    "reactId": "r17",
+    "ctxId": "ctx41",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.4771
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx42",
+    "label": "output$poke_stats_1-height",
+    "type": "observer",
+    "prevCtxId": "ctx26",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.477416
+  },
+  {
+    "action": "enter",
+    "reactId": "r9",
+    "ctxId": "ctx42",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.477534
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r9",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx42",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.4782
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r9",
+    "depOnReactId": "r4",
+    "ctxId": "ctx42",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.478354
+  },
+  {
+    "action": "exit",
+    "reactId": "r9",
+    "ctxId": "ctx42",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.480065
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx43",
+    "label": "output$poke_stats_1-weight",
+    "type": "observer",
+    "prevCtxId": "ctx27",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.480488
+  },
+  {
+    "action": "enter",
+    "reactId": "r10",
+    "ctxId": "ctx43",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.480714
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r10",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx43",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.482346
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r10",
+    "depOnReactId": "r4",
+    "ctxId": "ctx43",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.482573
+  },
+  {
+    "action": "exit",
+    "reactId": "r10",
+    "ctxId": "ctx43",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.484731
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx44",
+    "label": "output$poke_stats_1-base_happiness",
+    "type": "observer",
+    "prevCtxId": "ctx28",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.485122
+  },
+  {
+    "action": "enter",
+    "reactId": "r11",
+    "ctxId": "ctx44",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.485241
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r11",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx44",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.485814
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r11",
+    "depOnReactId": "r4",
+    "ctxId": "ctx44",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.485935
+  },
+  {
+    "action": "exit",
+    "reactId": "r11",
+    "ctxId": "ctx44",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.487852
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx45",
+    "label": "output$poke_stats_1-capture_rate",
+    "type": "observer",
+    "prevCtxId": "ctx29",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.488194
+  },
+  {
+    "action": "enter",
+    "reactId": "r12",
+    "ctxId": "ctx45",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.48831
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r12",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx45",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.488916
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r12",
+    "depOnReactId": "r4",
+    "ctxId": "ctx45",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.489039
+  },
+  {
+    "action": "exit",
+    "reactId": "r12",
+    "ctxId": "ctx45",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.490774
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx46",
+    "label": "output$poke_stats_1-growth_rate",
+    "type": "observer",
+    "prevCtxId": "ctx30",
+    "srcref": [29, 34, 37, 9, 34, 9],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.49111
+  },
+  {
+    "action": "enter",
+    "reactId": "r13",
+    "ctxId": "ctx46",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.491227
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r13",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx46",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.491801
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r13",
+    "depOnReactId": "r4",
+    "ctxId": "ctx46",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.491922
+  },
+  {
+    "action": "exit",
+    "reactId": "r13",
+    "ctxId": "ctx46",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.49364
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx47",
+    "label": "output$poke_stats_1-poke_stats",
+    "type": "observer",
+    "prevCtxId": "ctx31",
+    "srcref": [42, 42, 44, 36, 42, 36],
+    "srcfile": "mod_poke_stats.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.493931
+  },
+  {
+    "action": "enter",
+    "reactId": "r14",
+    "ctxId": "ctx47",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.494047
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r14",
+    "depOnReactId": "r4",
+    "ctxId": "ctx47",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.494574
+  },
+  {
+    "action": "exit",
+    "reactId": "r14",
+    "ctxId": "ctx47",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.527175
+  },
+  {
+    "action": "createContext",
+    "ctxId": "ctx48",
+    "label": "output$poke_info_1-poke_infos",
+    "type": "observer",
+    "prevCtxId": "ctx34",
+    "srcref": [23, 35, 62, 7, 35, 7],
+    "srcfile": "mod_poke_info.R",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.527662
+  },
+  {
+    "action": "enter",
+    "reactId": "r6",
+    "ctxId": "ctx48",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.527783
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx48",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.528369
+  },
+  {
+    "action": "dependsOn",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx48",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.528639
+  },
+  {
+    "action": "exit",
+    "reactId": "r6",
+    "ctxId": "ctx48",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.552594
+  },
+  {
+    "action": "asyncStop",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308266.552716
+  },
+  {
+    "action": "idle",
+    "session": null,
+    "time": 1692308266.553145
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r6",
+    "ctxId": "ctx48",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.741391
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r4",
+    "ctxId": "ctx48",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.741536
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r6",
+    "depOnReactId": "r5",
+    "ctxId": "ctx48",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.741617
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r6",
+    "ctxId": "ctx48",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.741697
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r7",
+    "ctxId": "ctx36",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.741885
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r7",
+    "depOnReactId": "r4",
+    "ctxId": "ctx36",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.741959
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r7",
+    "ctxId": "ctx36",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.742053
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r8",
+    "ctxId": "ctx38",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.742372
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r8",
+    "depOnReactId": "r4",
+    "ctxId": "ctx38",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.742569
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r8",
+    "depOnReactId": "r5",
+    "ctxId": "ctx38",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.742678
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r8",
+    "ctxId": "ctx38",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.742761
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r9",
+    "ctxId": "ctx42",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.742976
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r9",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx42",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.744931
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r9",
+    "depOnReactId": "r4",
+    "ctxId": "ctx42",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.74572
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r9",
+    "ctxId": "ctx42",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.74586
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r10",
+    "ctxId": "ctx43",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.746094
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r10",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx43",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.746178
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r10",
+    "depOnReactId": "r4",
+    "ctxId": "ctx43",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.746318
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r10",
+    "ctxId": "ctx43",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.74641
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r11",
+    "ctxId": "ctx44",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.749322
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r11",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx44",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.749869
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r11",
+    "depOnReactId": "r4",
+    "ctxId": "ctx44",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.750049
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r11",
+    "ctxId": "ctx44",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.750779
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r12",
+    "ctxId": "ctx45",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.751599
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r12",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx45",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.751705
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r12",
+    "depOnReactId": "r4",
+    "ctxId": "ctx45",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.751793
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r12",
+    "ctxId": "ctx45",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.751886
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r13",
+    "ctxId": "ctx46",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.75206
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r13",
+    "depOnReactId": "r1$poke_stats_1-poke_basic_stats",
+    "ctxId": "ctx46",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.752202
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r13",
+    "depOnReactId": "r4",
+    "ctxId": "ctx46",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.752301
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r13",
+    "ctxId": "ctx46",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.752514
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r14",
+    "ctxId": "ctx47",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.754009
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r14",
+    "depOnReactId": "r4",
+    "ctxId": "ctx47",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.754141
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r14",
+    "ctxId": "ctx47",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.754381
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r15",
+    "ctxId": "ctx39",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.754678
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r15",
+    "depOnReactId": "r4",
+    "ctxId": "ctx39",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.754762
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r15",
+    "ctxId": "ctx39",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.754901
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r16",
+    "ctxId": "ctx40",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.755105
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r16",
+    "depOnReactId": "r4",
+    "ctxId": "ctx40",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.755216
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r16",
+    "ctxId": "ctx40",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.755303
+  },
+  {
+    "action": "invalidateStart",
+    "reactId": "r17",
+    "ctxId": "ctx41",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.755479
+  },
+  {
+    "action": "dependsOnRemove",
+    "reactId": "r17",
+    "depOnReactId": "r4",
+    "ctxId": "ctx41",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.755555
+  },
+  {
+    "action": "invalidateEnd",
+    "reactId": "r17",
+    "ctxId": "ctx41",
+    "type": "observer",
+    "session": "8a4f530d67ea95d6c694924eef826c7a",
+    "time": 1692308267.75566
+  }
+];
+      window.__APP_TIME__ = String("TRUE").toLowerCase() === "true";
+    } catch (e) {}
+  </script>
+
+  
+  <script src="reactlogAsset/reactlog.js"></script>
+</head>
+
+<body>
+  <div id="bodyContent">
+    <div id="statusHeader">
+      <div id="movementButtons" style="z-index:1;">
+        <img id="prevUserMarkButton" class="navigationButton" src="./reactlogAsset/images/prev-mark.svg" alt="Previous User Mark" title="Previous User Mark (home)" height="24" width="30">
+        <img id="prevIdleButton" class="navigationButton" src="./reactlogAsset/images/prev-idle.svg" alt="Previous idle" title="Previous idle (&#8997; &#8679; &#8592;)" height="24" width="30">
+        <img id="prevOutputCalcButton" class="navigationButton" src="./reactlogAsset/images/prev-output-calc.svg" alt="Previous output calculation" title="Previous output calculation (&#8997; &#8592;)" height="24" width="30">
+        <img id="prevStepButton"  class="navigationButton" src="./reactlogAsset/images/prev-step.svg"  alt="Previous step"  title="Previous step (&#8592;)"  height="24" width="30">
+        <img id="nextStepButton"  class="navigationButton" src="./reactlogAsset/images/next-step.svg"  alt="Next step"      title="Next step (&#8594;)"      height="24" width="30">
+        <img id="nextOutputCalcButton" class="navigationButton" src="./reactlogAsset/images/next-output-calc.svg" alt="Next output calculation"     title="Next output calculation (&#8997; &#8594;)"     height="24" width="30">
+        <img id="nextIdleButton" class="navigationButton" src="./reactlogAsset/images/next-idle.svg" alt="Next idle"     title="Next idle (&#8997; &#8679; &#8594;)"     height="24" width="30">
+        <img id="nextUserMarkButton" class="navigationButton" src="./reactlogAsset/images/next-mark.svg" alt="Next User Mark"     title="Next User Mark (end)"     height="24" width="30">
+      </div>
+      <div id="eventStep">Step: <span id="eventStepNum" class="monospaced-pre"></span></div>
+      <div id="eventStatus"></div>
+      <div id="eventWrapper">
+        <div id="eventTimeBlock">
+          <div id="eventTime">Time: </div>
+          <div id="eventTimeNum" class="monospaced-pre"></div>
+        </div>
+        <div id="eventSessionBlock">
+          <div id="eventSession">Session: </div>
+          <div id="eventSessionNum" class="monospaced-pre"></div>
+        </div>
+      </div>
+      <div id="filter">
+        <input id="search" type="text" size="12" placeholder="Search Labels..."/>
+      </div>
+    </div> <!-- end statusHeader -->
+
+    <div id="timeline" style="z-index:1;">
+      <div id="timeline-bg">
+        <div id="timeline-fill"></div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="cytoWrapper">
+        <div id="cyto"></div>
+      </div>
+      <div id="legend">
+        <div class="legendRow legendRowTopMiddle"><div id="legendReady" class="legendColor"></div><div class="legendLabel">Ready</div></div>
+        <div class="legendRow legendRowTopMiddle"><div id="legendCalculating" class="legendColor"></div><div class="legendLabel">Calculating</div></div>
+        <div class="legendRow legendRowTopMiddle"><div id="legendInvalidating" class="legendColor"></div><div class="legendLabel">Invalidating</div></div>
+        <div class="legendRow" id="legendRowInvalidated"><div id="legendInvalidated" class="legendColor"></div><div class="legendLabel">Invalidated</div></div>
+        <div class="legendRow" id="legendRowFrozen" style="display:none"><div id="legendFrozen" class="legendColor"></div><div class="legendLabel">Frozen</div></div>
+      </div>
+      <div id="logEntry" style="display: none;"></div>
+    </div>
+  </div>
+</body>
+</html>
