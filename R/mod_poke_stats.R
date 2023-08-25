@@ -32,7 +32,7 @@ mod_poke_stats_server <- function(id, selected) {
 
         tablerStatCard(
           value = val,
-          title = stat,
+          title = h1(stat, style = "color: pink !important"),
           width = 12
         )
       })
@@ -49,21 +49,21 @@ mod_poke_stats_server <- function(id, selected) {
       req(!is.null(selected()))
 
       tablerCard(
-        title = paste0(selected()$name, " Stats"),
+        title = h1(paste0(selected()$name, " Stats")),
         options = tagList(
           prettySwitch(
             inputId = ns("poke_basic_stats"),
             label = "Display Basic Stats?",
             value = TRUE,
-            status = "default",
+            status = "warning",
             slim = TRUE,
             fill = FALSE,
             bigger = TRUE,
             inline = FALSE
           )
         ),
-        footer = sprintf("Sum of stats: %s (Mew is 500)", selected()$sum_stats),
-        status = "info",
+        footer = tags$strong(sprintf("Sum of stats: %s (Mew is 500)", selected()$sum_stats)),
+        status = "purple",
         statusSide = "left",
         collapsible = FALSE,
         closable = FALSE,

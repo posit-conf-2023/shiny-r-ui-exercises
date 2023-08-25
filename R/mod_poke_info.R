@@ -55,7 +55,7 @@ mod_poke_info_server <- function(id, selected, is_shiny) {
                 icon = "address-card"
               )
             ),
-            width = 12
+            width = 4
           )
         ),
         br()

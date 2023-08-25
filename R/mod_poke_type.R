@@ -55,13 +55,13 @@ mod_poke_type_server <- function(id, selected) {
           tablerInfoCard(
             value = paste(type_slot, type_name),
             status = poke_color,
-            icon = NULL,
-            description = NULL,
+            icon = icon("card"),
+            description = "%",
             width = 12
           ),
           fluidRow(
             column(
-              width = 6,
+              width = 10,
               align = "left",
               h5("Damages from:"), br(),
               HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "red"), " ")),
@@ -72,7 +72,7 @@ mod_poke_type_server <- function(id, selected) {
               lapply(seq_along(no_damage_from), FUN = function(j) no_damage_from[[j]])
             ),
             column(
-              width = 6,
+              width = 2,
               align = "left",
               h5("Damages to:"), br(),
               HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "green"), " ")),

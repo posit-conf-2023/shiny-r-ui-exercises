@@ -20,7 +20,7 @@ mod_poke_select_ui <- function(id) {
     align = "center",
     pickerInput(
       inputId = ns("selected"),
-      width = NULL,
+      width = "10%",
       options = list(style = "btn-primary"),
       multiple = FALSE,
       choices = poke_names,
@@ -34,10 +34,10 @@ mod_poke_select_ui <- function(id) {
       prettySwitch(
         inputId = ns("is_shiny"),
         label = "Shiny?",
-        value = FALSE,
-        status = "primary",
+        value = TRUE,
+        status = "danger",
         slim = TRUE,
-        width = NULL
+        width = "100%"
       ),
       class = "m-2"
     )
