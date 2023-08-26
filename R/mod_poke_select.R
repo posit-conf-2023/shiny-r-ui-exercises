@@ -50,9 +50,13 @@ mod_poke_select_ui <- function(id) {
 mod_poke_select_server <- function(id) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
+
+    # WORKSHOP TODO
+    # Add user feedback to select_pokemon
+
     return(
       list(
-        selected = reactive(poke_data[[input$selected]]),
+        selected = reactive(select_pokemon(input$selected)),
         is_shiny = reactive(input$is_shiny)
       )
     )

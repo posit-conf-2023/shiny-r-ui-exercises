@@ -27,35 +27,37 @@ mod_poke_info_server <- function(id, selected, is_shiny) {
 
       tagList(
         fluidRow(
-          tablerProfileCard(
-            title = selected()$name,
-            subtitle = tagList(
-              pokemon$description,
-              tablerTagList(
-                align = "center",
-                tablerTag(name = pokemon$shape, rounded = TRUE, color = "default"),
-                tablerTag(name = pokemon$habitat, rounded = TRUE, color = pokemon$color)
-              )
-            ),
-            background = "https://images.pexels.com/photos/355748/pexels-photo-355748.jpeg",
-            src = if (!is_shiny()) {
-              pokemon$sprites$front_default
-            } else {
-              pokemon$sprites$front_shiny
-            },
-            socials = tablerSocialLinks(
-              tablerSocialLink(
-                name = "pokeApi",
-                href = paste0("https://pokeapi.co/api/v2/pokemon/", tolower(selected())),
-                icon = "at"
+          tablerCard(
+            tablerProfileCard(
+              title = selected()$name,
+              subtitle = tagList(
+                pokemon$description,
+                tablerTagList(
+                  align = "center",
+                  tablerTag(name = pokemon$shape, rounded = TRUE, color = "default"),
+                  tablerTag(name = pokemon$habitat, rounded = TRUE, color = pokemon$color)
+                )
               ),
-              tablerSocialLink(
-                name = "Bulbapedia",
-                href = paste0("https://bulbapedia.bulbagarden.net/wiki/", selected(), "_(Pok\u00e9mon)"),
-                icon = "address-card"
-              )
-            ),
-            width = 4
+              background = "https://images.pexels.com/photos/355748/pexels-photo-355748.jpeg",
+              src = if (!is_shiny()) {
+                pokemon$sprites$front_default
+              } else {
+                pokemon$sprites$front_shiny
+              },
+              socials = tablerSocialLinks(
+                tablerSocialLink(
+                  name = "pokeApi",
+                  href = paste0("https://pokeapi.co/api/v2/pokemon/", tolower(selected())),
+                  icon = "at"
+                ),
+                tablerSocialLink(
+                  name = "Bulbapedia",
+                  href = paste0("https://bulbapedia.bulbagarden.net/wiki/", selected(), "_(Pok\u00e9mon)"),
+                  icon = "address-card"
+                )
+              ),
+              width = 4
+            )
           )
         ),
         br()

@@ -55,7 +55,7 @@ mod_poke_type_server <- function(id, selected) {
           tablerInfoCard(
             value = paste(type_slot, type_name),
             status = poke_color,
-            icon = icon("card"),
+            icon = icon("xmark"),
             description = "%",
             width = 12
           ),

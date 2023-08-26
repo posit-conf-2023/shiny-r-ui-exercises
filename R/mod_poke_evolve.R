@@ -29,8 +29,8 @@ mod_poke_evolve_server <- function(id, selected, is_shiny) {
         tablerAlert(
           title = "Alert",
           "This Pokemon is a base pokemon.",
-          icon = "alert-triangle",
-          status = "danger"
+          icon = "thumbs-up",
+          status = "success"
         )
       } else {
         # Check that the evolution belongs to the first 151 pkmns ...
@@ -52,8 +52,8 @@ mod_poke_evolve_server <- function(id, selected, is_shiny) {
             title = "Alert",
             "This pokemon is an evolution of another pokemon but not
             in the first generation.",
-            icon = "alert-triangle",
-            status = "danger"
+            icon = "thumbs-up",
+            status = "success"
           )
         }
       }
