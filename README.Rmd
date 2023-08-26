@@ -19,9 +19,9 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-Goal: shinyMons2 is a pokemon app displaying information related to the 151 first pokemons (first gen). Your mission, should you access it, consists in redesign this app currently suffering from some UX issues, following the best practices learnt during our workshop. Fear not! We'll proceed step by step... 
+Goal: shinyMons2 is a pokemon app displaying information related to the 151 first pokemons (first gen). Your mission, should you accept it, will be to redesign this app currently suffering from some UX issues, following the best practices learnt during our workshop. Fear not! We'll proceed step by step... 
 
-This project is hosted on Posit Cloud at ... 
+This project is hosted on Posit Cloud in this [space](https://posit.cloud/spaces/400773/join?access_code=ajwkws91bhF-IhEXDVWH9-0mukSUF3jiETCkzrgt) and deployed [here](https://dgranjon.shinyapps.io/shinyMonsUgly).
 
 ## Work instructions
 
@@ -39,7 +39,13 @@ Please remember that you can run `styler::style_pkg()` and `devtools::lint()` so
 
 ### Part 2 colors and typo
 - bslib color palette.
-- dark/light mode?
+- Contrasts tuning.
+- Dark/light mode?
+
+### Part 3 interactions
+- Sanitize failing functions.
+- Handle slow functions.
+- Better help messages.
 
 ## App structure
 
@@ -69,12 +75,7 @@ renv::restore()
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(shinyMons2)
-run_app()
-```
+To run the app, source `app.R`.
 
 ## Code of Conduct
   

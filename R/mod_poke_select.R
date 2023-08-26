@@ -53,10 +53,13 @@ mod_poke_select_server <- function(id) {
 
     # WORKSHOP TODO
     # Add user feedback to select_pokemon
+    selected_pokemon <- eventReactive(input$selected, {
+      select_pokemon(input$selected)
+    })
 
     return(
       list(
-        selected = reactive(select_pokemon(input$selected)),
+        selected = selected_pokemon,
         is_shiny = reactive(input$is_shiny)
       )
     )

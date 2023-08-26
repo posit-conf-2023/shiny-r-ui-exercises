@@ -10,12 +10,14 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 Goal: shinyMons2 is a pokemon app displaying information related to the
-151 first pokemons (first gen). Your mission, should you access it,
-consists in redesign this app currently suffering from some UX issues,
+151 first pokemons (first gen). Your mission, should you accept it, will
+be to redesign this app currently suffering from some UX issues,
 following the best practices learnt during our workshop. Fear not! We’ll
 proceed step by step…
 
-This project is hosted on Posit Cloud at …
+This project is hosted on Posit Cloud in this
+[space](https://posit.cloud/spaces/400773/join?access_code=ajwkws91bhF-IhEXDVWH9-0mukSUF3jiETCkzrgt)
+and deployed [here](https://dgranjon.shinyapps.io/shinyMonsUgly).
 
 ## Work instructions
 
@@ -33,13 +35,20 @@ Please remember that you can run `styler::style_pkg()` and
 
 ### Part 1 Layout
 
--   Wireframing.
--   bslib layout.
+- Wireframing.
+- bslib layout.
 
 ### Part 2 colors and typo
 
--   bslib color palette.
--   dark/light mode?
+- bslib color palette.
+- Contrasts tuning.
+- Dark/light mode?
+
+### Part 3 interactions
+
+- Sanitize failing functions.
+- Handle slow functions.
+- Better help messages.
 
 ## App structure
 
@@ -53,12 +62,12 @@ too many requests).
 
 If you’re more curious, browse to `inst/doc` and have a look to:
 
--   `data-doc.html`: htmlwidget showing the data structure for the first
-    pokemon, so you get an idea on what is available to you.
--   `flow`: app module structure, powered by
-    [`{flow}`](https://github.com/moodymudskipper/flow).
--   `reactlog`: app reactivity log explorator, powered by
-    [`{reacltlog}`](https://rstudio.github.io/reactlog/).
+- `data-doc.html`: htmlwidget showing the data structure for the first
+  pokemon, so you get an idea on what is available to you.
+- `flow`: app module structure, powered by
+  [`{flow}`](https://github.com/moodymudskipper/flow).
+- `reactlog`: app reactivity log explorator, powered by
+  [`{reacltlog}`](https://rstudio.github.io/reactlog/).
 
 ## Installation
 
@@ -79,14 +88,7 @@ renv::restore()
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(shinyMons2)
-run_app()
-```
-
-<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
+To run the app, source `app.R`.
 
 ## Code of Conduct
 
