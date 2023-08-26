@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: deploy
-        uses: DivadNojnarg/shinyapps-deploy-github-action@v1
+        uses: DivadNojnarg/shinyapps-deploy-github-action@v2
         with:
           # account and application name (https://<accountName>.shinyapps.io/<appName>)
           appName: "shinyMonsUgly"
