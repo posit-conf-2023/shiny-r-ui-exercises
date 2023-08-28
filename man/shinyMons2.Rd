@@ -4,3 +4,6 @@
 \name{shinyMons2}
 \alias{shinyMons2}
 \title{shinyMons2}
+\description{
+All the first generation Pokemon data in a shiny app.
+}

@@ -122,6 +122,9 @@ get_max_of_max <- function(data = get_max_stats()) {
 #' @return A chart htmlwidget.
 #' @export
 create_radar_stats <- function(pokemon) {
+  # R CMD check stop crying ...
+  x <- y <- z <- NULL
+
   stats <- pokemon$stats
   # Prepare data
   data <- process_pokemon_stats(stats)
@@ -200,3 +203,7 @@ select_pokemon <- function(selected) {
     poke_data[[selected]]
   }
 }
+
+# R CMD check ...
+globalVariables("poke_data")
+

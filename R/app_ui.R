@@ -25,7 +25,7 @@ app_ui <- function(request) {
         url = "https://pokeapi.co/static/logo-6221638601ef7fa7c835eae08ef67a16.png",
         status = "success",
         date = NULL,
-        "This app use pokeApi by Paul Hallet and PokéAPI contributors."
+        "This app use pokeApi by Paul Hallet and PokeAPI contributors."
       )
     )
   )
@@ -89,6 +89,16 @@ golem_add_external_resources <- function() {
     bundle_resources(
       path = app_sys("app/www"),
       app_title = "shinyMons2"
+    ),
+    # custom font setup
+    tags$link(
+      href = "https://fonts.googleapis.com/css?family=Press+Start+2P",
+      rel = "stylesheet"
+    ),
+    tags$style(
+      "html, body, pre, code, kbd, samp {
+          font-family: 'Press Start 2P';
+      }"
     )
   )
 }

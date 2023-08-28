@@ -13,3 +13,5 @@ $run_dev.*
 ^app\.R$
 ^rsconnect$
 ^\.github$
+^\.lintr$
+^R/_disable_autoload\.R$

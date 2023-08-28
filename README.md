@@ -22,13 +22,12 @@ and deployed [here](https://dgranjon.shinyapps.io/shinyMonsUgly).
 ## Work instructions
 
 Each one of you will be working in a group, an ID will be assigned to
-you prior to the workshop. Therefore, only one person/group will have to
-commit the code to GitHub. Group leads will be randomly assigned prior
-to the workshop and communicated to you.
+you prior to the workshop. Group leads will be randomly assigned prior
+to the workshop and communicated to you. Therefore, only one
+person/group will have to commit the code to GitHub.
 
-1.  Create a new branch named `<group_ID>` (1 per group!).
-2.  Run `renv::restore()`.
-3.  Ready to start?
+1.  Group lead: Create a new branch named `<group_ID>` (1 per group!).
+2.  Anyone: Run `renv::restore()`.
 
 Please remember that you can run `styler::style_pkg()` and
 `devtools::lint()` so the code style stays consistent.
@@ -53,14 +52,14 @@ Please remember that you can run `styler::style_pkg()` and
 ## App structure
 
 This app leveraging `{golem}` is composed of 6 modules. The main module
-is `mod_poke_select`, which returns the selected pokemon (picker input)
+is `mod_poke_select`, which returns the selected Pokemon (picker input)
 as well as its variant (shiny or not). Those data are passed to other
-modules. General pokemon data, namely `poke_data`, have been
+modules. General Pokemon data, namely `poke_data`, have been
 pre-processed for you so you don’t have to focus on the data wrangling
 but the UI design (This also avoids us to flood the underlying API with
 too many requests).
 
-If you’re more curious, browse to `inst/doc` and have a look to:
+If you’re more curious, browse to `inst/app-doc` and have a look to:
 
 - `data-doc.html`: htmlwidget showing the data structure for the first
   pokemon, so you get an idea on what is available to you.
