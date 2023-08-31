@@ -16,7 +16,8 @@ Imports:
     tablerDash,
     pkgload,
     echarts4r,
-    dplyr
+    dplyr,
+    bsicons
 Remotes: RinteRface/tablerDash
 Encoding: UTF-8
 LazyData: true

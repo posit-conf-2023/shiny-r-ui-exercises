@@ -2,6 +2,7 @@
 
 export(create_radar_stats)
 export(run_app)
+import(bsicons)
 import(echarts4r)
 import(shiny)
 import(tablerDash)

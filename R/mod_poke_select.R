@@ -18,6 +18,7 @@ mod_poke_select_ui <- function(id) {
   ns <- NS(id)
   fluidRow(
     align = "center",
+    bs_icon("hand-index-fill"),
     pickerInput(
       inputId = ns("selected"),
       width = "10%",

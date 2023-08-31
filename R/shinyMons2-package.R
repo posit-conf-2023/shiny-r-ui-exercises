@@ -6,6 +6,7 @@
 #' @import shiny
 #' @import tablerDash
 #' @import echarts4r
+#' @import bsicons
 #' @importFrom pkgload load_all
 #' @importFrom shinyWidgets pickerInput prettySwitch
 #' @importFrom dplyr as_tibble summarise across all_of rowwise pull
