@@ -35,22 +35,25 @@ mod_poke_move_server <- function(id, selected) {
         # card content
         lapply(seq_along(moves), FUN = function(i) {
           move_name <- moves[[i]]$name
-          move_slot <- moves[[i]]$moveSlot
-          move_effect <- moves[[i]]$moveEffect
-          move_id <- moves[[i]]$id
+          move_pp <- moves[[i]]$pp
+          move_priority <- moves[[i]]$priority
+          move_type <- moves[[i]]$type
+          move_power <- moves[[i]]$power
+          move_accuracy <- moves[[i]]$accuracy
+          move_text <- moves[[i]]$text
 
           fluidRow(
-            paste("Slot: ", move_slot),
+            paste("Move: ", move_name),
             tagAppendAttributes(
               tablerTag(
-                paste(move_id, move_name),
+                paste("Power:", move_power),
                 href = NULL,
                 rounded = FALSE,
                 color = NULL
               ),
               class = "mx-2"
             ),
-            move_effect
+            move_text
           )
         })
       )

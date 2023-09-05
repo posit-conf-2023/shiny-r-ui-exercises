@@ -80,11 +80,7 @@ get_max_stats <- function(stat = NULL) {
         "base_stat",
         numeric(1)
       )
-      names(tmp) <- extra_from_list(
-        lapply(stats, function(s) {
-          s$stat
-        })
-      )
+      names(tmp) <- extra_from_list(stats)
       tmp
     }
   )
@@ -163,11 +159,7 @@ create_radar_stats <- function(pokemon) {
 #' @keywords internal
 process_pokemon_stats <- function(stats) {
   data.frame(
-    x = extra_from_list(
-      lapply(stats, function(s) {
-        s$stat
-      })
-    ),
+    x = extra_from_list(stats),
     y = extra_from_list(stats, "base_stat", numeric(1))
   )
 }
@@ -196,7 +188,6 @@ select_pokemon <- function(selected) {
   # Find a way to make this function elegantly failing
   # and warn the end user ...
   res <- sample(c(FALSE, TRUE), 1)
-  message(res)
   if (!res) {
     stop("Could not connect to the Pokemon API ...")
   } else {

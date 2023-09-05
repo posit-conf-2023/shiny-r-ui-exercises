@@ -11,19 +11,18 @@ poke_api <- "https://pokeapi.co/api/v2/pokemon/"
 # we need some filtering...
 kanto_locations <- fromJSON("https://pokeapi.co/api/v2/region/1")$locations$name
 
+english_language <- function(l) {
+  which(
+    extra_from_list(lapply(l, `[[`, "language")) == "en"
+  )[[1]]
+}
+
 poke_data <- mclapply(seq_along(poke_ids), FUN = function(i) {
   tmp <- fromJSON(sprintf("%s/%s", poke_api, i), simplifyVector = FALSE)
   details <- fromJSON(tmp$species$url, simplifyVector = FALSE)
 
   # Extract English language
-  lang_idx <- which(
-    vapply(
-      lapply(details$flavor_text_entries, `[[`, "language"),
-      `[[`,
-      "name",
-      FUN.VALUE = character(1)
-    ) == "en"
-  )[[1]]
+  lang_idx <- english_language(details$flavor_text_entries)
 
   locations <- fromJSON(tmp$location_area_encounters, simplifyVector = FALSE)
   # we could dive into location$version_details to get
@@ -65,26 +64,47 @@ poke_data <- mclapply(seq_along(poke_ids), FUN = function(i) {
 
   sum_stats <- sum(vapply(tmp$stats, `[[`, "base_stat", FUN.VALUE = numeric(1)))
 
+  # Process stats: don't include stat url
+  tmp$stats <- lapply(tmp$stats, function(stat) {
+    stat$name <- stat$stat$name
+    stat$stat <- NULL
+    stat
+  })
+
   # Process types: extend by API values
   tmp$types <- dropNulls(
     lapply(tmp$types, function(type) {
       data <- fromJSON(type$type$url, simplifyVector = FALSE)
       if (data$generation$name == "generation-i") {
-        type$type$url <- NULL
         type$name <- type$type$name
-        type$type$name <- NULL
-        c(type, data)
+        type$type <- NULL
+        type$damage_relations <- data$damage_relations
+        type
       }
     })
   )
 
-  # Process moves
-  tmp$abilities <- dropNulls(
-    lapply(tmp$abilities, function(ability) {
-      data <- fromJSON(ability$ability$url, simplifyVector = FALSE)
-      if (data$generation$name == "generation-i") {
-        ability$ability$url <- NULL
-        c(ability, data)
+  # Process moves (can be super slow)
+  tmp$moves <- dropNulls(
+    lapply(tmp$moves, function(move) {
+      first_gen <- vapply(move$version_group_details, function(d) {
+        grepl("(red|blue|yellow)", d$version_group$name)
+      }, FUN.VALUE = logical(1))
+
+      # Don't proceed if does not exist in first gen
+      if (sum(first_gen) > 0) {
+        data <- fromJSON(move$move$url, simplifyVector = FALSE)
+        move$name <- data$name
+        # Hopefully flavor_text_entries > 0 ?? ;)
+        move$text <- data$effect_entries[[1]]$effect
+        move$move <- NULL
+        move$version_group_details <- NULL
+        move$pp <- data$pp
+        move$priority <- data$priority
+        move$type <- data$type$name
+        move$power <- if (length(data$power) > 0) data$power else NA
+        move$accuracy <- if (length(data$accuracy) > 0) data$accuracy else NA
+        move
       }
     })
   )
@@ -109,7 +129,7 @@ poke_data <- mclapply(seq_along(poke_ids), FUN = function(i) {
       growth_rate = details$growth_rate$name
     ),
     sum_stats = sum_stats, # Sum of base stats. Mew is 500 ...
-    abilities = tmp$abilities,
+    moves = tmp$moves,
     types = tmp$types,
     locations = locations,
     evolve_from = evolves_from,
