@@ -55,13 +55,21 @@ mod_poke_info_server <- function(id, selected) {
                 other_stats_names(),
                 ~tags$div(
                   class="info-card",
-                  tags$div(class="title", stringr::str_replace(.x, "_", " ")),
+                  tags$div(class="title",
+                           purrr::map(
+                             unlist(stringr::str_split(.x, "_")),
+                             tags$span
+                          )
+                  ),
                   tags$p(selected()$other_stats[[.x]])
                 )
               ),
               tags$div(
                 mod_poke_type_ui(ns("poke_type_1")),
-                mod_poke_evolve_ui(ns("poke_evolve_1"))
+                tags$div(
+                  class="info-card",
+                  mod_poke_evolve_ui(ns("poke_evolve_1"))
+                )
               )
             )
         )

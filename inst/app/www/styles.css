@@ -127,6 +127,9 @@ display: flex;
     font-size: 12px;
     color: var(--main-color);
     line-height: 1;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 4px;
 }
 
 .right-grid .bslib-grid {
@@ -152,7 +155,7 @@ section.moves {
 
 .move-card {
     width: 300px;
-    border: solid 1px gray;
+    border: solid 3px var(--main-color);
     position: relative;
     /* background: red; */
     /* color: white; */
@@ -211,7 +214,7 @@ section.moves {
     position: absolute;
     right: 25px;
     top: 65px;
-    color: black;
+    color: var(--main-color);
     line-height: 1;
 }
 
@@ -219,4 +222,16 @@ section.moves {
     text-align: center;
     font-size: 30px;
     margin-top: 100px;
+}
+
+.card {
+    border-color: var(--main-color);
+}
+
+.card-header {
+    border-bottom-color: var(--main-color);
+}
+
+.card-footer {
+    border-top-color: var(--main-color);
 }
