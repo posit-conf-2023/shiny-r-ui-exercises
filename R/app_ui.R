@@ -4,70 +4,20 @@
 #'     DO NOT REMOVE.
 #' @noRd
 app_ui <- function(request) {
-
-  nav_tag <- tablerDashNav(
-    id = "mymenu",
-    src = "https://www.ssbwiki.com/images/9/9c/Master_Ball_Origin.png",
-    navMenu = tablerNavMenu(
-      tablerNavMenuItem(
-        tabName = "PokeInfo",
-        icon = "home",
-        h1("PokeInfo", style = "color: green"),
-        style = "background-color: grey",
-      )
-    ),
-    # Select input UI module
-    mod_poke_select_ui("poke_select_1"),
-    tablerDropdown(
-      tablerDropdownItem(
-        title = NULL,
-        href = "https://pokeapi.co",
-        url = "https://pokeapi.co/static/logo-6221638601ef7fa7c835eae08ef67a16.png",
-        status = "success",
-        date = NULL,
-        "This app use pokeApi by Paul Hallet and PokeAPI contributors."
-      )
-    )
-  )
-
-  nav_tag[[1]]$attribs$style <- paste0(
-    nav_tag[[1]]$attribs$style,
-    "background-color: yellow"
-  )
-
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
-    # Your application UI logic
-    tablerDashPage(
-      navbar = nav_tag,
-      footer = tablerDashFooter(
-        copyrights = "Disclaimer: this app is purely intended for learning purpose. @David Granjon, 2023"
-      ),
-      title = "Gotta Catch'Em (Almost) All",
-      body = tablerDashBody(
-        style = "background-color: brown",
-        tablerTabItems(
-          tablerTabItem(
-            tabName = "PokeInfo",
-            fluidRow(
-              column(
-                width = 8,
-                mod_poke_info_ui("poke_info_1"),
-                mod_poke_type_ui("poke_type_1"),
-                mod_poke_evolve_ui("poke_evolve_1")
-              ),
-              column(
-                width = 4,
-                mod_poke_stats_ui("poke_stats_1"),
-                mod_poke_move_ui("poke_move_1"),
-                mod_poke_location_ui("poke_location_1")
-              )
-            )
-          )
-        )
-      )
-    )
+    # WORKSHOP TO DO
+    # Organize the UI modules here in the layout
+    # you draw during the wireframing part:
+
+    # - mod_poke_info_ui("poke_info_1")
+    # - mod_poke_type_ui("poke_type_1")
+    # - mod_poke_evolve_ui("poke_evolve_1")
+    # - mod_poke_stats_ui("poke_stats_1")
+    # - mod_poke_move_ui("poke_move_1")
+    # - mod_poke_location_ui("poke_location_1")
+
   )
 }
 
@@ -90,15 +40,11 @@ golem_add_external_resources <- function() {
       path = app_sys("app/www"),
       app_title = "shinyMons2"
     ),
-    # custom font setup
-    tags$link(
-      href = "https://fonts.googleapis.com/css?family=Press+Start+2P",
-      rel = "stylesheet"
-    ),
-    tags$style(
-      "html, body, pre, code, kbd, samp {
-          font-family: 'Press Start 2P';
-      }"
-    )
+    # WORKSHOP TODO
+    # Put any custom CSS and JS or font here.
+    # Note that when elements are in the www folder,
+    # there is no need to put them here because of
+    # bundle_resources above.
+
   )
 }
