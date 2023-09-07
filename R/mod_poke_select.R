@@ -7,6 +7,7 @@
 #' @noRd
 mod_poke_select_ui <- function(id) {
   poke_names <- names(poke_data)
+  # Extract all pokemon sprites
   poke_sprites <- vapply(
     lapply(poke_data, `[[`, "sprites"),
     `[[`,
@@ -16,6 +17,11 @@ mod_poke_select_ui <- function(id) {
   )
 
   ns <- NS(id)
+
+  # WORKSHOP TODO
+  # You may leave this as is or totally change
+  # it according to your needs ;)
+
   fluidRow(
     align = "center",
     bs_icon("hand-index-fill"),
@@ -53,7 +59,7 @@ mod_poke_select_server <- function(id) {
     ns <- session$ns
 
     # WORKSHOP TODO
-    # Add user feedback to select_pokemon
+    # Add user feedback to select_pokemon (see .R/utils.R)
     selected_pokemon <- eventReactive(input$selected, {
       select_pokemon(input$selected)
     })
