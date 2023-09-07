@@ -39,9 +39,7 @@ app_ui <- function(request) {
           )
         ),
         # style = "background-color: brown",
-        fluidRow(
-          mod_poke_type_ui("poke_type_1")
-        ),
+        # mod_poke_type_ui("poke_type_1"),
         mod_poke_move_ui("poke_move_1")
       )
     )
