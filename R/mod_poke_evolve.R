@@ -19,42 +19,29 @@ mod_poke_evolve_ui <- function(id) {
 mod_poke_evolve_server <- function(id, selected, is_shiny) {
   moduleServer(id, function(input, output, session) {
 
-    # treat data and generate the timeline
+    # Render the evolution UI on the server side
     output$poke_evolve <- renderUI({
+      # Tips
+      # selected() contains the selected Pokemon data
+      # You can inspect it with listviewer::jsonedit(selected())
       req(!is.null(selected()))
       evol <- selected()$evolve_from
 
       # If pokemon can't evolve ...
       if (length(evol) == 0) {
-        tablerAlert(
-          title = "Alert",
-          "This Pokemon is a base pokemon.",
-          icon = "thumbs-up",
-          status = "success"
-        )
+        # WORKSHOP TO DO
+        # What do we show we the Pokemon can't evolve?
       } else {
         # Check that the evolution belongs to the first 151 pkmns ...
         if (evol$id <= 151) {
-          tablerTimelineItem(
-            title = paste0("Evolves from: ", evol$name),
-            status = "green",
-            date = NULL,
-            img(
-              src = if (is_shiny()) {
-                poke_data[[evol$id]]$sprites$front_shiny
-              } else {
-                poke_data[[evol$id]]$sprites$front_default
-              }
-            )
-          )
+          # WORKSHOP TO DO
+          # Show UI element for Pokemon evolution
         } else {
-          tablerAlert(
-            title = "Alert",
-            "This pokemon is an evolution of another pokemon but not
-            in the first generation.",
-            icon = "thumbs-up",
-            status = "success"
-          )
+          # WORKSHOP TO DO
+          # What should we display if the Pokemon
+          # evolution is not part of the first 151 Pokemon.
+          # (In other words, when the evolution was added after
+          # the first generation)?
         }
       }
     })
