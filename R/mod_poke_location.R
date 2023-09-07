@@ -9,7 +9,7 @@
 #' @importFrom shiny NS tagList
 mod_poke_location_ui <- function(id) {
   ns <- NS(id)
-  uiOutput(ns("poke_locations"), class = "col-sm-6")
+  uiOutput(ns("poke_locations"))
 }
 
 #' poke_location Server Functions
@@ -26,23 +26,15 @@ mod_poke_location_server <- function(id, selected) {
 
       locations <- selected()$locations
 
-      tablerCard(
-        title = paste0("where to find ", selected()$name, " ?"),
-        collapsible = FALSE,
-        closable = FALSE,
-        zoomable = FALSE,
-        statusSide = "top",
-        width = 12,
-        if (!is.null(locations)) {
-          lapply(seq_along(locations), function(i) {
-            if (!is.null(locations[[i]])) {
-              fluidRow(paste(i, ":", locations[[i]]))
-            }
-          })
-        } else {
-          "This pokemon cannot be found in the wild."
-        }
-      )
+      # WORKSHOP TODO
+      # Add pokemon locations below. You may check
+      # if the pokemon can be seen in the wild as shown below:
+      #. if (!is.null(locations)) {
+      #.   # Location is a list. You'll have to loop through all
+      #.   # of its elements
+      #. } else {
+      #.   # This pokemon cannot be found in the wild
+      #. }
     })
   })
 }
