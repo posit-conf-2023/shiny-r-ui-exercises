@@ -8,32 +8,13 @@ app_ui <- function(request) {
   nav_tag <- tablerDashNav(
     id = "mymenu",
     src = "https://www.ssbwiki.com/images/9/9c/Master_Ball_Origin.png",
-    navMenu = tablerNavMenu(
-      tablerNavMenuItem(
-        tabName = "PokeInfo",
-        icon = "home",
-        h1("PokeInfo", style = "color: green"),
-        style = "background-color: grey",
-      )
-    ),
-    # Select input UI module
-    mod_poke_select_ui("poke_select_1"),
-    tablerDropdown(
-      tablerDropdownItem(
-        title = NULL,
-        href = "https://pokeapi.co",
-        url = "https://pokeapi.co/static/logo-6221638601ef7fa7c835eae08ef67a16.png",
-        status = "success",
-        date = NULL,
-        "This app use pokeApi by Paul Hallet and PokeAPI contributors."
-      )
-    )
+    mod_poke_select_ui("poke_select_1")
   )
 
-  nav_tag[[1]]$attribs$style <- paste0(
-    nav_tag[[1]]$attribs$style,
-    "background-color: yellow"
-  )
+  # nav_tag[[1]]$attribs$style <- paste0(
+  #  nav_tag[[1]]$attribs$style,
+  #  "background-color: yellow"
+  # )
 
   tagList(
     # Leave this function for adding external resources
@@ -46,26 +27,27 @@ app_ui <- function(request) {
       ),
       title = "Gotta Catch'Em (Almost) All",
       body = tablerDashBody(
-        style = "background-color: brown",
-        tablerTabItems(
-          tablerTabItem(
-            tabName = "PokeInfo",
-            fluidRow(
-              column(
-                width = 8,
-                mod_poke_info_ui("poke_info_1"),
-                mod_poke_type_ui("poke_type_1"),
-                mod_poke_evolve_ui("poke_evolve_1")
-              ),
-              column(
-                width = 4,
-                mod_poke_stats_ui("poke_stats_1"),
-                mod_poke_move_ui("poke_move_1"),
-                mod_poke_location_ui("poke_location_1")
-              )
+        tags$div(class="background-banner"),
+         tags$section(class="section-body",
+          tags$div(class="left",
+              mod_poke_info_ui("poke_info_1")
+          ),
+          tags$div(class="right",
+            tags$div(class="right-grid",
+                     bslib::layout_column_wrap(
+                       width = NULL,
+                       height = 388,
+                       mod_poke_stats_ui("poke_stats_1"),
+                       mod_poke_location_ui("poke_location_1")
+                     )
             )
           )
-        )
+        ),
+        # style = "background-color: brown",
+        fluidRow(
+          mod_poke_type_ui("poke_type_1")
+        ),
+        mod_poke_move_ui("poke_move_1")
       )
     )
   )
@@ -95,10 +77,10 @@ golem_add_external_resources <- function() {
       href = "https://fonts.googleapis.com/css?family=Press+Start+2P",
       rel = "stylesheet"
     ),
-    tags$style(
-      "html, body, pre, code, kbd, samp {
-          font-family: 'Press Start 2P';
-      }"
-    )
+    # tags$style(
+    #  "html, body, pre, code, kbd, samp {
+    #      font-family: 'Press Start 2P';
+    #  }"
+    # )
   )
 }

@@ -16,7 +16,7 @@ mod_poke_evolve_ui <- function(id) {
 #' @param is_shiny Is the pokemon under its shiny form?
 #'
 #' @noRd
-mod_poke_evolve_server <- function(id, selected, is_shiny) {
+mod_poke_evolve_server <- function(id, selected) {
   moduleServer(id, function(input, output, session) {
 
     # treat data and generate the timeline
@@ -26,35 +26,17 @@ mod_poke_evolve_server <- function(id, selected, is_shiny) {
 
       # If pokemon can't evolve ...
       if (length(evol) == 0) {
-        tablerAlert(
-          title = "Alert",
-          "This Pokemon is a base pokemon.",
-          icon = "thumbs-up",
-          status = "success"
-        )
+        tags$p("Base Pokemon")
       } else {
         # Check that the evolution belongs to the first 151 pkmns ...
         if (evol$id <= 151) {
-          tablerTimelineItem(
-            title = paste0("Evolves from: ", evol$name),
-            status = "green",
-            date = NULL,
-            img(
-              src = if (is_shiny()) {
-                poke_data[[evol$id]]$sprites$front_shiny
-              } else {
-                poke_data[[evol$id]]$sprites$front_default
-              }
-            )
+          tags$div(
+            tags$div("Evolves from:", class="title"),
+            tags$p(evol$name)
+            #,tags$img(src = poke_data[[evol$id]]$sprites$front_shiny)
           )
         } else {
-          tablerAlert(
-            title = "Alert",
-            "This pokemon is an evolution of another pokemon but not
-            in the first generation.",
-            icon = "thumbs-up",
-            status = "success"
-          )
+          tags$p("This pokemon is an evolution of another pokemon but not in the first generation")
         }
       }
     })

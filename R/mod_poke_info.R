@@ -16,8 +16,10 @@ mod_poke_info_ui <- function(id) {
 #' @param is_shiny Is the pokemon in shiny form? Boolean.
 #'
 #' @noRd
-mod_poke_info_server <- function(id, selected, is_shiny) {
+mod_poke_info_server <- function(id, selected) {
   moduleServer(id, function(input, output, session) {
+
+    ns <- session$ns
 
     # generate the profile cards (as many as the number of selected pokemons)
     output$poke_infos <- renderUI({
@@ -26,42 +28,50 @@ mod_poke_info_server <- function(id, selected, is_shiny) {
       pokemon <- selected()
 
       tagList(
-        fluidRow(
-          tablerCard(
-            tablerProfileCard(
-              title = selected()$name,
-              subtitle = tagList(
-                pokemon$description,
-                tablerTagList(
-                  align = "center",
-                  tablerTag(name = pokemon$shape, rounded = TRUE, color = "default"),
-                  tablerTag(name = pokemon$habitat, rounded = TRUE, color = pokemon$color)
+        tags$div(class="left-content",
+            tags$img(class="avatar-icon", src=pokemon$sprites$front_shiny),
+            tags$div(class="name", selected()$name),
+            tags$div(class="description", pokemon$description),
+            tags$div(class="social-and-pills",
+            tablerTagList(
+              align = "center",
+              tablerTag(name = pokemon$shape, rounded = TRUE, color = "default"),
+              tablerTag(name = pokemon$habitat, rounded = TRUE, color = pokemon$color)
+            ),
+            tablerSocialLinks(
+              tablerSocialLink(
+                name = "pokeApi",
+                href = paste0("https://pokeapi.co/api/v2/pokemon/", tolower(selected())),
+                icon = "at"
+              ),
+              tablerSocialLink(
+                name = "Bulbapedia",
+                href = paste0("https://bulbapedia.bulbagarden.net/wiki/", selected(), "_(Pok\u00e9mon)"),
+                icon = "address-card"
+              )
+            )),
+            tags$div(class="info-grid",
+              purrr::map(
+                other_stats_names(),
+                ~tags$div(
+                  class="info-card",
+                  tags$div(class="title", stringr::str_replace(.x, "_", " ")),
+                  tags$p(selected()$other_stats[[.x]])
                 )
               ),
-              background = "https://images.pexels.com/photos/355748/pexels-photo-355748.jpeg",
-              src = if (!is_shiny()) {
-                pokemon$sprites$front_default
-              } else {
-                pokemon$sprites$front_shiny
-              },
-              socials = tablerSocialLinks(
-                tablerSocialLink(
-                  name = "pokeApi",
-                  href = paste0("https://pokeapi.co/api/v2/pokemon/", tolower(selected())),
-                  icon = "at"
-                ),
-                tablerSocialLink(
-                  name = "Bulbapedia",
-                  href = paste0("https://bulbapedia.bulbagarden.net/wiki/", selected(), "_(Pok\u00e9mon)"),
-                  icon = "address-card"
-                )
-              ),
-              width = 4
+              tags$div(
+                class="info-card",
+                mod_poke_type_ui(ns("poke_type_1")),
+                mod_poke_evolve_ui(ns("poke_evolve_1"))
+              )
             )
-          )
-        ),
-        br()
+        )
       )
     })
+
+    mod_poke_stats_server("poke_stats_1", selected)
+    mod_poke_evolve_server("poke_evolve_1", selected)
+    mod_poke_type_server("poke_type_1", selected)
+
   })
 }

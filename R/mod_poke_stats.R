@@ -24,20 +24,6 @@ mod_poke_stats_server <- function(id, selected) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    # Programmatically generate stat cards
-    lapply(other_stats_names(), function(stat) {
-      output[[stat]] <- renderUI({
-        req(input$poke_basic_stats)
-        val <- selected()$other_stats[[stat]]
-
-        tablerStatCard(
-          value = val,
-          title = h1(stat, style = "color: pink !important"),
-          width = 12
-        )
-      })
-    })
-
     # Generate radar chart for pokemons
     output$poke_stats <- renderEcharts4r({
       req(!is.null(selected()))
@@ -47,31 +33,15 @@ mod_poke_stats_server <- function(id, selected) {
     # card wrapper for the charts
     output$poke_stats_card <- renderUI({
       req(!is.null(selected()))
-
-      tablerCard(
-        title = h1(paste0(selected()$name, " Stats")),
-        options = tagList(
-          prettySwitch(
-            inputId = ns("poke_basic_stats"),
-            label = "Display Basic Stats?",
-            value = TRUE,
-            status = "warning",
-            slim = TRUE,
-            fill = FALSE,
-            bigger = TRUE,
-            inline = FALSE
-          )
+      bslib::card(
+        height = 388,
+        bslib::card_header("Statistics"),
+        bslib::card_body(
+          echarts4rOutput(outputId = ns("poke_stats"))
         ),
-        footer = tags$strong(sprintf("Sum of stats: %s (Mew is 500)", selected()$sum_stats)),
-        status = "purple",
-        statusSide = "left",
-        collapsible = FALSE,
-        closable = FALSE,
-        zoomable = FALSE,
-        width = 12,
-        overflow = FALSE,
-        echarts4rOutput(outputId = ns("poke_stats"))
+        bslib::card_footer(sprintf("Sum of stats: %s (Mew is 500)", selected()$sum_stats))
       )
     })
+
   })
 }

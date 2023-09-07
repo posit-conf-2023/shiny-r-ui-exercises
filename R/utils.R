@@ -145,7 +145,8 @@ create_radar_stats <- function(pokemon) {
     data |>
       e_charts(x) |>
       e_radar(y, name = paste0(pokemon$name, " Stats"), max = get_max_of_max()) |>
-      e_tooltip(trigger = "item")
+      e_tooltip(trigger = "item") |>
+      e_color('#393D47')
   }
 }
 
@@ -187,7 +188,7 @@ select_pokemon <- function(selected) {
   # WORKSHOP TODO
   # Find a way to make this function elegantly failing
   # and warn the end user ...
-  res <- sample(c(FALSE, TRUE), 1)
+  res <- TRUE
   if (!res) {
     stop("Could not connect to the Pokemon API ...")
   } else {

@@ -9,7 +9,7 @@
 #' @importFrom shiny NS tagList
 mod_poke_location_ui <- function(id) {
   ns <- NS(id)
-  uiOutput(ns("poke_locations"), class = "col-sm-6")
+  uiOutput(ns("poke_locations"))
 }
 
 #' poke_location Server Functions
@@ -26,23 +26,18 @@ mod_poke_location_server <- function(id, selected) {
 
       locations <- selected()$locations
 
-      tablerCard(
-        title = paste0("where to find ", selected()$name, " ?"),
-        collapsible = FALSE,
-        closable = FALSE,
-        zoomable = FALSE,
-        statusSide = "top",
-        width = 12,
-        if (!is.null(locations)) {
-          lapply(seq_along(locations), function(i) {
-            if (!is.null(locations[[i]])) {
-              fluidRow(paste(i, ":", locations[[i]]))
-            }
-          })
-        } else {
-          "This pokemon cannot be found in the wild."
-        }
+      if (is.null(locations)) {
+        location_content <- "This pokemon cannot be found in the wild."
+      } else {
+        location_content <-  tags$ul(purrr::map(locations, tags$li))
+      }
+
+      bslib::card(
+        height = 388,
+        bslib::card_header("Location"),
+        bslib::card_body(location_content)
       )
     })
+
   })
 }
