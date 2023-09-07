@@ -28,8 +28,12 @@ person/group will have to commit the code to GitHub.
 
 1.  Group lead: Create a new branch named `<group_ID>` (1 per group!).
 2.  Anyone: Run `renv::restore()`.
+3.  Explore `poke_data`.
+4.  Move to `fresh-start` branch to start completing the workshop
+    instructions. They are indicated by `WORKSHOP TODO` in the
+    `./R/mod_poke_*` files.
 
-Please remember that you can run `styler::style_pkg()` and
+Note: remember that you can run `styler::style_pkg()` and
 `devtools::lint()` so the code style stays consistent.
 
 ### Part 1 Layout
@@ -51,7 +55,7 @@ Please remember that you can run `styler::style_pkg()` and
 
 ## App structure
 
-This app leveraging `{golem}` is composed of 6 modules. The main module
+This app leveraging `{golem}` is composed of 7 modules. The main module
 is `mod_poke_select`, which returns the selected Pokemon (picker input)
 as well as its variant (shiny or not). Those data are passed to other
 modules. General Pokemon data, namely `poke_data`, have been
@@ -73,7 +77,7 @@ If you’re more curious, browse to `inst/app-doc` and have a look to:
 You can install the development version of shinyMons2 like so:
 
 ``` r
-remotes::instal_github("RinteRface/posit-conf-2023-exercise")
+remotes::install_github("RinteRface/posit-conf-2023-exercise")
 ```
 
 ### Package dependencies
@@ -87,7 +91,7 @@ renv::restore()
 
 ## Example
 
-To run the app, source `app.R`.
+To run the app, source `./app.R`.
 
 ## Code of Conduct
 
