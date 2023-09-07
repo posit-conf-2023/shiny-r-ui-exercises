@@ -60,7 +60,6 @@ mod_poke_info_server <- function(id, selected) {
                 )
               ),
               tags$div(
-                class="info-card",
                 mod_poke_type_ui(ns("poke_type_1")),
                 mod_poke_evolve_ui(ns("poke_evolve_1"))
               )
@@ -71,7 +70,6 @@ mod_poke_info_server <- function(id, selected) {
 
     mod_poke_stats_server("poke_stats_1", selected)
     mod_poke_evolve_server("poke_evolve_1", selected)
-    mod_poke_type_server("poke_type_1", selected)
 
   })
 }

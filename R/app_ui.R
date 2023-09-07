@@ -11,11 +11,6 @@ app_ui <- function(request) {
     mod_poke_select_ui("poke_select_1")
   )
 
-  # nav_tag[[1]]$attribs$style <- paste0(
-  #  nav_tag[[1]]$attribs$style,
-  #  "background-color: yellow"
-  # )
-
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),

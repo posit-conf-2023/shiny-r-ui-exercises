@@ -30,8 +30,7 @@ mod_poke_move_server <- function(id, selected) {
         purrr::map(moves,
           ~tags$div(class="move-card",
                    tags$div(class="title", .x$name),
-                   tags$p("Power:", .x$power),
-                   tags$hr(),
+                   tags$div(class="power", tags$span("Power"), .x$power),
                    tags$p(.x$text)
           )
         ))
