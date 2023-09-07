@@ -24,68 +24,40 @@ mod_poke_type_server <- function(id, selected) {
 
       types <- selected()$types
 
-      lapply(seq_along(types), FUN = function(i) {
-        type_name <- types[[i]]$name
-        type_slot <- types[[i]]$slot
+      # WORKSHOP TODO
+      # types is a list so you can use the below code
+      # to generate the corresponding UI:
 
-        damage_relations <- types[[i]]$damage_relations
-
-        double_damage_from <- extra_from_list(
-          damage_relations$double_damage_from
-        )
-        double_damage_to <- extra_from_list(
-          damage_relations$double_damage_to
-        )
-        half_damage_from <- extra_from_list(
-          damage_relations$half_damage_from
-        )
-        half_damage_to <- extra_from_list(
-          damage_relations$half_damage_to
-        )
-        no_damage_from <- extra_from_list(
-          damage_relations$no_damage_from
-        )
-        no_damage_to <- extra_from_list(
-          damage_relations$no_damage_to
-        )
-
-        poke_color <- get_type_colors(type_name)
-
-        tagList(
-          tablerInfoCard(
-            value = paste(type_slot, type_name),
-            status = poke_color,
-            icon = icon("xmark"),
-            description = "%",
-            width = 12
-          ),
-          fluidRow(
-            column(
-              width = 10,
-              align = "left",
-              h5("Damages from:"), br(),
-              HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "red"), " ")),
-              lapply(seq_along(double_damage_from), FUN = function(j) double_damage_from[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0.5X", rounded = FALSE, color = "green"), " ")),
-              lapply(seq_along(half_damage_from), FUN = function(j) half_damage_from[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0", rounded = FALSE, color = "default"), " ")),
-              lapply(seq_along(no_damage_from), FUN = function(j) no_damage_from[[j]])
-            ),
-            column(
-              width = 2,
-              align = "left",
-              h5("Damages to:"), br(),
-              HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "green"), " ")),
-              lapply(seq_along(double_damage_to), FUN = function(j) double_damage_to[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0.5X", rounded = FALSE, color = "red"), " ")),
-              lapply(seq_along(half_damage_to), FUN = function(j) half_damage_to[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0", rounded = FALSE, color = "default"), " ")),
-              lapply(seq_along(no_damage_to), FUN = function(j) no_damage_to[[j]])
-            )
-          ),
-          br()
-        )
-      })
+      # lapply(seq_along(types), FUN = function(i) {
+      #   type_name <- types[[i]]$name
+      #   type_slot <- types[[i]]$slot
+      #
+      #   # Tip: damage relation is a deeply nested list.
+      #   # Elements are extracted below with extra_from_list ...
+      #   damage_relations <- types[[i]]$damage_relations
+      #
+      #   double_damage_from <- extra_from_list(
+      #     damage_relations$double_damage_from
+      #   )
+      #   double_damage_to <- extra_from_list(
+      #     damage_relations$double_damage_to
+      #   )
+      #   half_damage_from <- extra_from_list(
+      #     damage_relations$half_damage_from
+      #   )
+      #   half_damage_to <- extra_from_list(
+      #     damage_relations$half_damage_to
+      #   )
+      #   no_damage_from <- extra_from_list(
+      #     damage_relations$no_damage_from
+      #   )
+      #   no_damage_to <- extra_from_list(
+      #     damage_relations$no_damage_to
+      #   )
+      #
+      #   # Map the color according to the type name
+      #   poke_color <- get_type_colors(type_name)
+      # })
     })
   })
 }
