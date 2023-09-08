@@ -43,13 +43,17 @@ section.section-body {
 }
 
 .avatar-icon {
-  background: white;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  margin-top: -50px;
-  height: 150px;
-  width: 150px;
-  border: solid 5px var(--main-color);
+    background: white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: -50px;
+    margin-left: 90px;
+    height: 150px;
+    width: 150px;
+    border: solid 5px var(--main-color);
+    /* top: -50px; */
+    /* left: 0px; */
+    /* position: absolute; */
 }
 
 section.section-body {
@@ -234,4 +238,46 @@ section.moves {
 
 .card-footer {
     border-top-color: var(--main-color);
+}
+
+#poke_info_1-poke_evolve_1-poke_evolve {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border: solid 3px var(--main-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    top: 30px;
+    left: 50px;
+}
+
+div#poke_info_1-poke_evolve_1-poke_evolve p {
+    margin: 0;
+    line-height: 12px;
+}
+
+p.evolution-text {
+    padding: 7px;
+    padding-right: 50px;
+    z-index: -900;
+}
+
+.evolution-text {
+    position: absolute;
+    left: -90px;
+    /* padding: 12px; */
+    background: var(--main-color);
+    padding: 7px;
+    padding-right: 50px;
+    color: white;
+    top: 25px;
+    /* border-radius: 20px; */
+    padding: 7px;
+    padding-right: 50px;
+    z-index: -900;
 }

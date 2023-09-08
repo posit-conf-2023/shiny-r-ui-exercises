@@ -29,14 +29,17 @@ mod_poke_info_server <- function(id, selected) {
 
       tagList(
         tags$div(class="left-content",
-            tags$img(class="avatar-icon", src=pokemon$sprites$front_shiny),
+            tags$div(style="position:relative;",
+              tags$img(class="avatar-icon", src=pokemon$sprites$front_shiny),
+              mod_poke_evolve_ui(ns("poke_evolve_1"))
+            ),
             tags$div(class="name", selected()$name),
             tags$div(class="description", pokemon$description),
             tags$div(class="social-and-pills",
             tablerTagList(
               align = "center",
               tablerTag(name = pokemon$shape, rounded = TRUE, color = "default"),
-              tablerTag(name = pokemon$habitat, rounded = TRUE, color = pokemon$color)
+              tablerTag(name = pokemon$habitat, rounded = TRUE, color = ifelse(pokemon$color == "white", 'offwhite', pokemon$color))
             ),
             tablerSocialLinks(
               tablerSocialLink(
@@ -65,11 +68,7 @@ mod_poke_info_server <- function(id, selected) {
                 )
               ),
               tags$div(
-                mod_poke_type_ui(ns("poke_type_1")),
-                tags$div(
-                  class="info-card",
-                  mod_poke_evolve_ui(ns("poke_evolve_1"))
-                )
+                mod_poke_type_ui(ns("poke_type_1"))
               )
             )
         )
