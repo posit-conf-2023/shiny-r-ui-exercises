@@ -66,9 +66,6 @@ mod_poke_info_server <- function(id, selected) {
                   ),
                   tags$p(selected()$other_stats[[.x]])
                 )
-              ),
-              tags$div(
-                mod_poke_type_ui(ns("poke_type_1"))
               )
             )
         )

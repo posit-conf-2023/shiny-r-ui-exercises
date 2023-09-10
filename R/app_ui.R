@@ -17,9 +17,6 @@ app_ui <- function(request) {
     # Your application UI logic
     tablerDashPage(
       navbar = nav_tag,
-      footer = tablerDashFooter(
-        copyrights = "Disclaimer: this app is purely intended for learning purpose. @David Granjon, 2023"
-      ),
       title = "Gotta Catch'Em (Almost) All",
       body = tablerDashBody(
         tags$div(class="background-banner"),
@@ -39,8 +36,11 @@ app_ui <- function(request) {
           )
         ),
         # style = "background-color: brown",
-        # mod_poke_type_ui("poke_type_1"),
+        mod_poke_type_ui("poke_type_1"),
         mod_poke_move_ui("poke_move_1")
+      ),
+      footer = tablerDashFooter(
+        copyrights = "Disclaimer: this app is purely intended for learning purpose. @David Granjon, 2023"
       )
     )
   )

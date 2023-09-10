@@ -7,7 +7,10 @@
 #' @noRd
 mod_poke_type_ui <- function(id) {
   ns <- NS(id)
-  uiOutput(ns("poke_types"))
+  tags$section(class="moves",
+    h3("Type"),
+    uiOutput(ns("poke_types"))
+  )
 }
 
 #' poke_type Server Functions
@@ -51,41 +54,50 @@ mod_poke_type_server <- function(id, selected) {
 
         poke_color <- get_type_colors(type_name)
 
-        tagList(
-          tablerInfoCard(
-            value = paste(type_slot, type_name),
-            status = poke_color,
-            icon = icon("xmark"),
-            description = "%",
-            width = 12
+        damage_table <- tags$table(
+          tags$tr(
+            tags$th("Damages From"),
+            tags$th("Damaages To")
           ),
-          fluidRow(
-            column(
-              width = 10,
-              align = "left",
-              h5("Damages from:"), br(),
-              HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "red"), " ")),
-              lapply(seq_along(double_damage_from), FUN = function(j) double_damage_from[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0.5X", rounded = FALSE, color = "green"), " ")),
-              lapply(seq_along(half_damage_from), FUN = function(j) half_damage_from[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0", rounded = FALSE, color = "default"), " ")),
+          tags$tr(
+            tags$td(class="flex-table-row",
+              span(class="n", style = "background:red;", "2X"),
+              lapply(seq_along(double_damage_from), FUN = function(j) double_damage_from[[j]])
+            ),
+            tags$td(class="flex-table-row",
+              span(class="n", style = "background:green;", "2X"),
+              lapply(seq_along(double_damage_to), FUN = function(j) double_damage_to[[j]])
+            ),
+          ),
+          tags$tr(
+            tags$td(class="flex-table-row",
+              span(class="n", style = "background:green;", "0.5X"),
+              lapply(seq_along(half_damage_from), FUN = function(j) half_damage_from[[j]])
+            ),
+            tags$td(class="flex-table-row",
+              span(class="n", style = "background:red;", "0.5X"),
+              lapply(seq_along(half_damage_to), FUN = function(j) half_damage_to[[j]])
+            ),
+          ),
+          tags$tr(
+            tags$td(class="flex-table-row",
+              span(class="n", style = "background:gray", "0"),
               lapply(seq_along(no_damage_from), FUN = function(j) no_damage_from[[j]])
             ),
-            column(
-              width = 2,
-              align = "left",
-              h5("Damages to:"), br(),
-              HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "green"), " ")),
-              lapply(seq_along(double_damage_to), FUN = function(j) double_damage_to[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0.5X", rounded = FALSE, color = "red"), " ")),
-              lapply(seq_along(half_damage_to), FUN = function(j) half_damage_to[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0", rounded = FALSE, color = "default"), " ")),
+            tags$td(class="flex-table-row",
+              span(class="n", style = "background:gray;", "0"),
               lapply(seq_along(no_damage_to), FUN = function(j) no_damage_to[[j]])
-            )
+            ),
           ),
-          br()
         )
+
+        tags$div(class="type-card",
+                 tags$span(class="title", type_name),
+                 damage_table
+        )
+
       })
+
     })
   })
 }

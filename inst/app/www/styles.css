@@ -141,7 +141,8 @@ display: flex;
 }
 
 section.moves {
-    margin: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .moves-grid {
@@ -280,4 +281,51 @@ p.evolution-text {
     padding: 7px;
     padding-right: 50px;
     z-index: -900;
+}
+
+h3.moves {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#poke_type_1-poke_types {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    gap: 12px;
+}
+
+.type-card {
+  border: solid 1px var(--main-color);
+}
+
+.type-card .title {
+    background: var(--main-color);
+    color: white;
+    padding: 7px;
+    width: 100%;
+    display: block;
+}
+
+.type-card {
+    border: solid 2px var(--main-color);
+    width: 50%;
+}
+
+.n {
+    padding: 3px;
+    text-align:center;
+    color: white;
+}
+
+.type-card tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+td.flex-table-row {
+    display: grid;
+    grid-template-columns: 35px 1fr;
 }
