@@ -36,8 +36,8 @@ app_ui <- function(request) {
           )
         ),
         # style = "background-color: brown",
-        mod_poke_type_ui("poke_type_1"),
-        mod_poke_move_ui("poke_move_1")
+        mod_poke_move_ui("poke_move_1"),
+        mod_poke_type_ui("poke_type_1")
       ),
       footer = tablerDashFooter(
         copyrights = "Disclaimer: this app is purely intended for learning purpose. @David Granjon, 2023"

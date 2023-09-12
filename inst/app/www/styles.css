@@ -295,6 +295,7 @@ h3.moves {
     margin: 0 auto;
     margin-top: 50px;
     gap: 12px;
+    margin-bottom: 150px;
 }
 
 .type-card {
@@ -307,25 +308,41 @@ h3.moves {
     padding: 7px;
     width: 100%;
     display: block;
+    text-align: center;
 }
 
 .type-card {
     border: solid 2px var(--main-color);
-    width: 50%;
+    width: 100%;
 }
 
-.n {
-    padding: 3px;
-    text-align:center;
-    color: white;
+.type-card table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .type-card tr {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    border-bottom: solid 1px;
+    padding-bottom: 10px;
 }
 
-td.flex-table-row {
-    display: grid;
-    grid-template-columns: 35px 1fr;
+.type-card td {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+span.pill.tag.tag-rounded {
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    border: solid 1px var(--main-color);
 }

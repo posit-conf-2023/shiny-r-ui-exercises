@@ -54,41 +54,63 @@ mod_poke_type_server <- function(id, selected) {
 
         poke_color <- get_type_colors(type_name)
 
+        tags$div(
+          tags$div(
+            "Damages",
+
+          ),
+          tags$div(
+            "Damages From",
+
+          ),
+          tags$div(
+            "Damages To",
+
+          )
+        )
         damage_table <- tags$table(
           tags$tr(
+            tags$th("Damages"),
             tags$th("Damages From"),
-            tags$th("Damaages To")
+            tags$th("Damages To")
           ),
           tags$tr(
-            tags$td(class="flex-table-row",
-              span(class="n", style = "background:red;", "2X"),
-              lapply(seq_along(double_damage_from), FUN = function(j) double_damage_from[[j]])
-            ),
-            tags$td(class="flex-table-row",
-              span(class="n", style = "background:green;", "2X"),
-              lapply(seq_along(double_damage_to), FUN = function(j) double_damage_to[[j]])
-            ),
+            tags$td(span(class="n", "2X")),
+            tags$td(
+              purrr::map(double_damage_from,
+                         ~tags$span(.x, class="pill tag tag-rounded",)
+                         )
+              ),
+            tags$td(
+              purrr::map(double_damage_to, ~tags$span(.x, class="pill tag tag-rounded"))
+            )
           ),
           tags$tr(
-            tags$td(class="flex-table-row",
-              span(class="n", style = "background:green;", "0.5X"),
-              lapply(seq_along(half_damage_from), FUN = function(j) half_damage_from[[j]])
+            tags$td(span(class="n", "0.5X")),
+            tags$td(
+              purrr::map(half_damage_from, ~tags$span(.x, class="pill tag tag-rounded"))
             ),
-            tags$td(class="flex-table-row",
-              span(class="n", style = "background:red;", "0.5X"),
-              lapply(seq_along(half_damage_to), FUN = function(j) half_damage_to[[j]])
-            ),
+            tags$td(
+              purrr::map(half_damage_to, ~tags$span(.x, class="pill tag tag-rounded"))
+            )
           ),
           tags$tr(
-            tags$td(class="flex-table-row",
-              span(class="n", style = "background:gray", "0"),
-              lapply(seq_along(no_damage_from), FUN = function(j) no_damage_from[[j]])
+            tags$td(class="n", "0"),
+            tags$td(
+              purrr::map(no_damage_from,
+                         ~tags$span(.x,
+                                    class="pill tag tag-rounded",
+                         )
+              )
             ),
-            tags$td(class="flex-table-row",
-              span(class="n", style = "background:gray;", "0"),
-              lapply(seq_along(no_damage_to), FUN = function(j) no_damage_to[[j]])
-            ),
-          ),
+            tags$td(
+              purrr::map(no_damage_to,
+                         ~tags$span(.x,
+                                    class="pill tag tag-rounded",
+                         )
+              )
+            )
+          )
         )
 
         tags$div(class="type-card",

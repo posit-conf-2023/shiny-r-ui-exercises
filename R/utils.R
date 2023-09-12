@@ -6,21 +6,21 @@
 #' @keywords internal
 get_type_colors <- function(type) {
   switch(type,
-    "normal" = "gray-lightest",
-    "fighting" = "red",
-    "flying" = "indigo",
-    "poison" = "purple-light",
-    "ground" = "yellow-lighter",
-    "rock" = "yellow-darker",
-    "bug" = "green-lighter",
-    "ghost" = "purple-dark",
+    "normal" = "lightgray",
+    "fighting" = "#F98D80",
+    "flying" = "#BD9FFC",
+    "poison" = "#CBC3E3",
+    "ground" = "#FFFFED",
+    "rock" = "#FDDA0D",
+    "bug" = "#AEF1BD",
+    "ghost" = "#BD9FFC",
     "fire" = "orange",
-    "water" = "azure",
-    "grass" = "green",
+    "water" = "#B3DFF8",
+    "grass" = "#1EE80A",
     "electric" = "yellow",
-    "psychic" = "pink",
-    "ice" = "azure-lighter",
-    "dragon" = "purple-darker"
+    "psychic" = "#FF9AD0",
+    "ice" = "#C5FAF8",
+    "dragon" = "#BD9FFC"
   )
 }
 
