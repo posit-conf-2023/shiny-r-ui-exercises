@@ -7,8 +7,15 @@
 #' @noRd
 mod_poke_move_ui <- function(id) {
   ns <- NS(id)
-  tags$section(class="moves",
-    h3("Moves"),
+  tags$section(
+    class = "moves",
+    h3(
+      "Moves",
+      bslib::tooltip(
+        tags$sup(bs_icon("patch-question", size = "0.75em")),
+        "Moves are attacks the pokemon can learn."
+      )
+    ),
     reactable::reactableOutput(ns("poke_moves"))
   )
 }
@@ -65,9 +72,9 @@ mod_poke_move_server <- function(id, selected) {
           name = reactable::colDef(name = "Move", width = 150, cell = function(value) { tags$strong(value)} ),
           text = reactable::colDef(name = "Details"),
           power = reactable::colDef(name = "Power", width = 150, align = "left", cell = function(value) {
-          width <- ifelse(is.na(value), "0px", paste0(value / max(move_df$power, na.rm = TRUE) * 100, "%"))
-          bar_chart(value, width = width, fill = "#393D47", background = "#e1e1e1")
-        })
+            width <- ifelse(is.na(value), "0px", paste0(value / max(move_df$power, na.rm = TRUE) * 100, "%"))
+            bar_chart(value, width = width, fill = "#393D47", background = "#e1e1e1")
+          })
         )
       )
 

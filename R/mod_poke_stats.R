@@ -34,11 +34,20 @@ mod_poke_stats_server <- function(id, selected) {
     output$poke_stats_card <- renderUI({
       req(!is.null(selected()))
       bslib::card(
-        height = 388,
-        bslib::card_header("Statistics"),
-        bslib::card_body(
-          echarts4rOutput(outputId = ns("poke_stats"))
+        bslib::card_header(
+          HTML(
+            sprintf(
+              "%s Statistics %s",
+              bs_icon("graph-up"),
+              bslib::tooltip(
+                tags$sup(bs_icon("patch-question", size = "1em")),
+                "A Pokemon has 5 main stats. Mew has 100 for each stat. The maximum for each stat
+                is 255. The higher the sum, the better is the Pokemon."
+              )
+            )
+          )
         ),
+        bslib::card_body(echarts4rOutput(outputId = ns("poke_stats"))),
         bslib::card_footer(sprintf("Sum of stats: %s (Mew is 500)", selected()$sum_stats))
       )
     })

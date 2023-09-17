@@ -7,8 +7,18 @@
 #' @noRd
 mod_poke_type_ui <- function(id) {
   ns <- NS(id)
-  tags$section(class="moves",
-    h3("Type"),
+  tags$section(
+    class="moves",
+    h3(
+      "Types",
+      bslib::tooltip(
+        tags$sup(bs_icon("patch-question", size = "0.75em")),
+        "A pokemon has at least one type but may have several.
+        Each type has weakness/strength against another one.
+        For instance, fire is weak against water."
+      )
+
+    ),
     uiOutput(ns("poke_types"))
   )
 }
@@ -78,20 +88,20 @@ mod_poke_type_server <- function(id, selected) {
             tags$td(span(class="n", "2X")),
             tags$td(
               purrr::map(double_damage_from,
-                         ~tags$span(.x, class="pill tag tag-rounded",)
-                         )
-              ),
+                         ~tags$span(.x, class="pill bg-secondary tag tag-rounded",)
+              )
+            ),
             tags$td(
-              purrr::map(double_damage_to, ~tags$span(.x, class="pill tag tag-rounded"))
+              purrr::map(double_damage_to, ~tags$span(.x, class="pill bg-secondary tag tag-rounded"))
             )
           ),
           tags$tr(
-            tags$td(span(class="n", "0.5X")),
+            tags$td(span(class="n", "1/2")),
             tags$td(
-              purrr::map(half_damage_from, ~tags$span(.x, class="pill tag tag-rounded"))
+              purrr::map(half_damage_from, ~tags$span(.x, class="pill bg-light tag tag-rounded"))
             ),
             tags$td(
-              purrr::map(half_damage_to, ~tags$span(.x, class="pill tag tag-rounded"))
+              purrr::map(half_damage_to, ~tags$span(.x, class="pill bg-light tag tag-rounded"))
             )
           ),
           tags$tr(
@@ -99,14 +109,14 @@ mod_poke_type_server <- function(id, selected) {
             tags$td(
               purrr::map(no_damage_from,
                          ~tags$span(.x,
-                                    class="pill tag tag-rounded",
+                                    class="pill bg-white tag tag-rounded",
                          )
               )
             ),
             tags$td(
               purrr::map(no_damage_to,
                          ~tags$span(.x,
-                                    class="pill tag tag-rounded",
+                                    class="pill bg-white tag tag-rounded",
                          )
               )
             )

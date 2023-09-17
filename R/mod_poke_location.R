@@ -29,13 +29,23 @@ mod_poke_location_server <- function(id, selected) {
       if (is.null(locations)) {
         location_content <- "This pokemon cannot be found in the wild."
       } else {
-        location_content <-  tags$ul(purrr::map(locations, tags$li))
+        location_content <-  list_group(locations)
       }
-
-      bslib::card(
-        height = 388,
-        bslib::card_header("Location"),
-        bslib::card_body(location_content)
+      tagList(
+        tags$div(
+          class = "d-flex justify-content-center mt-4",
+          HTML(
+            sprintf(
+              "Location %s",
+              bslib::tooltip(
+                tags$sup(bs_icon("patch-question", size = "1em")),
+                "The Pokemon map is organized between roads, cities and locations.
+                This indicates where to find the pokemon."
+              )
+            )
+          )
+        ),
+        location_content
       )
     })
 

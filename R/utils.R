@@ -140,6 +140,7 @@ create_radar_stats <- function(pokemon) {
         max = get_max_of_max()
       ) |>
       e_radar(z, name = paste0(pokemon$evolve_from$name, " Stats")) |>
+      e_color(c('#393D47', '#BBBBBB')) |>
       e_tooltip(trigger = "item")
   } else {
     data |>
@@ -188,12 +189,38 @@ select_pokemon <- function(selected) {
   # WORKSHOP TODO
   # Find a way to make this function elegantly failing
   # and warn the end user ...
-  res <- TRUE
+  res <- sample(c(FALSE, TRUE), 1)
   if (!res) {
     stop("Could not connect to the Pokemon API ...")
   } else {
     poke_data[[selected]]
   }
+}
+
+badge <- function(text, color) {
+  tags$span(
+    class = sprintf("badge rounded-pill text-bg-%s", color),
+    text
+  )
+}
+
+jumbotron <- function(title, ...) {
+  tags$div(
+    class = "p-5 mt-1 mb-4 bg-secondary rounded-3",
+    tags$div(
+      class = "container-fluid py-5",
+      tags$h1(class = "display-5 fw-bold", title),
+      ...
+    )
+  )
+}
+
+list_group <- function(...) {
+  items <- c(...)
+  tags$ol(
+    class = "list-group list-group-numbered",
+    lapply(items, tags$li, class = "list-group-item")
+  )
 }
 
 # R CMD check ...

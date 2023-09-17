@@ -20,7 +20,7 @@ mod_poke_select_ui <- function(id) {
     align = "center",
     pickerInput(
       inputId = ns("selected"),
-      options = list(style = "btn-primary"),
+      options = list(style = "btn-secondary form-select-lg"),
       multiple = FALSE,
       choices = poke_names,
       choicesOpt = list(
