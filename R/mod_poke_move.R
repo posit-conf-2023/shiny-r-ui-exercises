@@ -7,7 +7,17 @@
 #' @noRd
 mod_poke_move_ui <- function(id) {
   ns <- NS(id)
-  uiOutput(ns("poke_moves"), class = "col-sm-12")
+  tags$section(
+    class = "moves",
+    h3(
+      "Moves",
+      bslib::tooltip(
+        tags$sup(bs_icon("patch-question", size = "0.75em")),
+        "Moves are attacks the pokemon can learn."
+      )
+    ),
+    reactable::reactableOutput(ns("poke_moves"))
+  )
 }
 
 #' poke_move Server Functions
@@ -16,47 +26,60 @@ mod_poke_move_ui <- function(id) {
 #' @noRd
 mod_poke_move_server <- function(id, selected) {
   moduleServer(id, function(input, output, session) {
+
     ns <- session$ns
 
     # generate the card
-    output$poke_moves <- renderPrint({
+    output$poke_moves <- reactable::renderReactable({
       req(!is.null(selected()))
-
       moves <- selected()$moves
 
-      tablerCard(
-        title = paste0(selected()$name, " Moves"),
-        statusSide = "top",
-        collapsible = FALSE,
-        closable = FALSE,
-        zoomable = FALSE,
-        width = 12,
-
-        # card content
-        lapply(seq_along(moves), FUN = function(i) {
-          move_name <- moves[[i]]$name
-          move_pp <- moves[[i]]$pp
-          move_priority <- moves[[i]]$priority
-          move_type <- moves[[i]]$type
-          move_power <- moves[[i]]$power
-          move_accuracy <- moves[[i]]$accuracy
-          move_text <- moves[[i]]$text
-
-          fluidRow(
-            paste("Move: ", move_name),
-            tagAppendAttributes(
-              tablerTag(
-                paste("Power:", move_power),
-                href = NULL,
-                rounded = FALSE,
-                color = NULL
-              ),
-              class = "mx-2"
-            ),
-            move_text
-          )
-        })
+      move_df <- data.frame(
+        name = purrr::map(moves, `[`, 'name') |> unlist(),
+        power = purrr::map(moves, `[`, 'power') |> unlist(),
+        text = purrr::map(moves, `[`, 'text') |> unlist()
       )
+
+      bar_chart <- function(label, width = "100%", height = "100%", fill = "#00bfc4", background = NULL) {
+
+        if (width == "0px") {
+          return(div(
+            style = list(
+              alignItems = "center",
+              background = background,
+              padding = "3px",
+              `font-size`= "0.75rem"),
+            label)
+          )
+        }
+
+        bar <- div(style = list(background = fill, display = 'flex', width = width, height = height, padding = "3px"), label)
+        chart <- div(style = list(
+          flexGrow = 1,
+          `font-size`= "0.75rem",
+          color="white",
+          background = background),
+          bar
+        )
+        div(style = list(alignItems = "center"), chart)
+      }
+
+      reactable::reactable(
+        move_df |> dplyr::arrange(-power),
+        height = 270,
+        pagination = FALSE,
+        columns = list(
+          name = reactable::colDef(name = "Move", width = 150, cell = function(value) { tags$strong(value)} ),
+          text = reactable::colDef(name = "Details"),
+          power = reactable::colDef(name = "Power", width = 150, align = "left", cell = function(value) {
+            width <- ifelse(is.na(value), "0px", paste0(value / max(move_df$power, na.rm = TRUE) * 100, "%"))
+            bar_chart(value, width = width, fill = "#393D47", background = "#e1e1e1")
+          })
+        )
+      )
+
     })
+
   })
+
 }
