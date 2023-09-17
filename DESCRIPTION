@@ -13,7 +13,6 @@ Imports:
     golem (>= 0.4.1),
     shiny (>= 1.7.5),
     shinyWidgets,
-    tablerDash,
     pkgload,
     echarts4r,
     dplyr,

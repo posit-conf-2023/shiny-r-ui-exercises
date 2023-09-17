@@ -4,7 +4,6 @@
 #'
 #' @name shinyMons2
 #' @import shiny
-#' @import tablerDash
 #' @import echarts4r
 #' @import bsicons
 #' @importFrom pkgload load_all

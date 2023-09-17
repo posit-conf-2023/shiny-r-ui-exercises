@@ -1547,23 +1547,6 @@
       ],
       "Hash": "90b28393209827327de889f49935140a"
     },
-    "tablerDash": {
-      "Package": "tablerDash",
-      "Version": "0.1.5.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "tablerDash",
-      "RemoteUsername": "RinteRface",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "040ebded8ac3103a220d0207398f2c97de3b0ea3",
-      "Requirements": [
-        "htmltools",
-        "knitr",
-        "shiny"
-      ],
-      "Hash": "3ff9cceee4cf79d8fdc30bccf53f88e7"
-    },
     "testthat": {
       "Package": "testthat",
       "Version": "3.1.10",
