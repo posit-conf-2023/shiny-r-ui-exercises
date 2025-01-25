@@ -16,8 +16,7 @@ following the best practices learnt during our workshop. Fear not! We’ll
 proceed step by step…
 
 This project is hosted on Posit Cloud in this
-[space](https://posit.cloud/spaces/400773/join?access_code=ajwkws91bhF-IhEXDVWH9-0mukSUF3jiETCkzrgt)
-and deployed [here](https://dgranjon.shinyapps.io/shinyMonsUgly).
+[space](https://posit.cloud/spaces/400773/join?access_code=ajwkws91bhF-IhEXDVWH9-0mukSUF3jiETCkzrgt).
 
 ## Work instructions
 
