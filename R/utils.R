@@ -6,21 +6,21 @@
 #' @keywords internal
 get_type_colors <- function(type) {
   switch(type,
-    "normal" = "gray-lightest",
-    "fighting" = "red",
-    "flying" = "indigo",
-    "poison" = "purple-light",
-    "ground" = "yellow-lighter",
-    "rock" = "yellow-darker",
-    "bug" = "green-lighter",
-    "ghost" = "purple-dark",
+    "normal" = "lightgray",
+    "fighting" = "#F98D80",
+    "flying" = "#BD9FFC",
+    "poison" = "#CBC3E3",
+    "ground" = "#FFFFED",
+    "rock" = "#FDDA0D",
+    "bug" = "#AEF1BD",
+    "ghost" = "#BD9FFC",
     "fire" = "orange",
-    "water" = "azure",
-    "grass" = "green",
+    "water" = "#B3DFF8",
+    "grass" = "#1EE80A",
     "electric" = "yellow",
-    "psychic" = "pink",
-    "ice" = "azure-lighter",
-    "dragon" = "purple-darker"
+    "psychic" = "#FF9AD0",
+    "ice" = "#C5FAF8",
+    "dragon" = "#BD9FFC"
   )
 }
 
@@ -140,12 +140,14 @@ create_radar_stats <- function(pokemon) {
         max = get_max_of_max()
       ) |>
       e_radar(z, name = paste0(pokemon$evolve_from$name, " Stats")) |>
+      e_color(c('#393D47', '#BBBBBB')) |>
       e_tooltip(trigger = "item")
   } else {
     data |>
       e_charts(x) |>
       e_radar(y, name = paste0(pokemon$name, " Stats"), max = get_max_of_max()) |>
-      e_tooltip(trigger = "item")
+      e_tooltip(trigger = "item") |>
+      e_color('#393D47')
   }
 }
 
@@ -193,6 +195,32 @@ select_pokemon <- function(selected) {
   } else {
     poke_data[[selected]]
   }
+}
+
+badge <- function(text, color) {
+  tags$span(
+    class = sprintf("badge rounded-pill text-bg-%s", color),
+    text
+  )
+}
+
+jumbotron <- function(title, ...) {
+  tags$div(
+    class = "p-5 mt-1 mb-4 bg-secondary rounded-3",
+    tags$div(
+      class = "container-fluid py-5",
+      tags$h1(class = "display-5 fw-bold", title),
+      ...
+    )
+  )
+}
+
+list_group <- function(...) {
+  items <- c(...)
+  tags$ol(
+    class = "list-group list-group-numbered",
+    lapply(items, tags$li, class = "list-group-item")
+  )
 }
 
 # R CMD check ...

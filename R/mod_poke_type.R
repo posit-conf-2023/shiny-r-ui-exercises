@@ -7,7 +7,20 @@
 #' @noRd
 mod_poke_type_ui <- function(id) {
   ns <- NS(id)
-  uiOutput(ns("poke_types"))
+  tags$section(
+    class="moves",
+    h3(
+      "Types",
+      bslib::tooltip(
+        tags$sup(bs_icon("patch-question", size = "0.75em")),
+        "A pokemon has at least one type but may have several.
+        Each type has weakness/strength against another one.
+        For instance, fire is weak against water."
+      )
+
+    ),
+    uiOutput(ns("poke_types"))
+  )
 }
 
 #' poke_type Server Functions
@@ -51,41 +64,72 @@ mod_poke_type_server <- function(id, selected) {
 
         poke_color <- get_type_colors(type_name)
 
-        tagList(
-          tablerInfoCard(
-            value = paste(type_slot, type_name),
-            status = poke_color,
-            icon = icon("xmark"),
-            description = "%",
-            width = 12
+        tags$div(
+          tags$div(
+            "Damages",
+
           ),
-          fluidRow(
-            column(
-              width = 10,
-              align = "left",
-              h5("Damages from:"), br(),
-              HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "red"), " ")),
-              lapply(seq_along(double_damage_from), FUN = function(j) double_damage_from[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0.5X", rounded = FALSE, color = "green"), " ")),
-              lapply(seq_along(half_damage_from), FUN = function(j) half_damage_from[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0", rounded = FALSE, color = "default"), " ")),
-              lapply(seq_along(no_damage_from), FUN = function(j) no_damage_from[[j]])
+          tags$div(
+            "Damages From",
+
+          ),
+          tags$div(
+            "Damages To",
+
+          )
+        )
+        damage_table <- tags$table(
+          tags$tr(
+            tags$th("Damages"),
+            tags$th("Damages From"),
+            tags$th("Damages To")
+          ),
+          tags$tr(
+            tags$td(span(class="n", "2X")),
+            tags$td(
+              purrr::map(double_damage_from,
+                         ~tags$span(.x, class="pill bg-secondary tag tag-rounded",)
+              )
             ),
-            column(
-              width = 2,
-              align = "left",
-              h5("Damages to:"), br(),
-              HTML(paste0(tablerTag(name = "2X", rounded = FALSE, color = "green"), " ")),
-              lapply(seq_along(double_damage_to), FUN = function(j) double_damage_to[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0.5X", rounded = FALSE, color = "red"), " ")),
-              lapply(seq_along(half_damage_to), FUN = function(j) half_damage_to[[j]]), br(),
-              HTML(paste0(tablerTag(name = "0", rounded = FALSE, color = "default"), " ")),
-              lapply(seq_along(no_damage_to), FUN = function(j) no_damage_to[[j]])
+            tags$td(
+              purrr::map(double_damage_to, ~tags$span(.x, class="pill bg-secondary tag tag-rounded"))
             )
           ),
-          br()
+          tags$tr(
+            tags$td(span(class="n", "1/2")),
+            tags$td(
+              purrr::map(half_damage_from, ~tags$span(.x, class="pill bg-light tag tag-rounded"))
+            ),
+            tags$td(
+              purrr::map(half_damage_to, ~tags$span(.x, class="pill bg-light tag tag-rounded"))
+            )
+          ),
+          tags$tr(
+            tags$td(class="n", "0"),
+            tags$td(
+              purrr::map(no_damage_from,
+                         ~tags$span(.x,
+                                    class="pill bg-white tag tag-rounded",
+                         )
+              )
+            ),
+            tags$td(
+              purrr::map(no_damage_to,
+                         ~tags$span(.x,
+                                    class="pill bg-white tag tag-rounded",
+                         )
+              )
+            )
+          )
         )
+
+        tags$div(class="type-card",
+                 tags$span(class="title", type_name),
+                 damage_table
+        )
+
       })
+
     })
   })
 }
